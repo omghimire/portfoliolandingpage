@@ -48,17 +48,32 @@
         }
 
         .page-header h1 { font-size: 2.5rem; margin-bottom: 10px; }
-        .page-header p { opacity: 0.9; max-width: 600px; margin: 0 auto; }
+        .page-header p { opacity: 0.9; max-width: 800px; margin: 0 auto; }
 
         /* --- ENVIRONMENT GRID CONTAINER --- */
         .env-container {
             max-width: 1200px;
             margin: 0 auto 80px auto;
             padding: 0 20px;
+        }
+        
+        /* Grouping Headers */
+        .group-header {
+            font-size: 2rem;
+            color: var(--primary-dark);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+            margin: 40px 0 30px 0;
+            font-weight: 600;
+        }
+
+        /* Responsive Grid Logic for 3 columns on desktop, adapts smaller */
+        .article-grid {
             display: grid;
-            /* Responsive Grid Logic */
+            /* Creates 3 columns that are at least 300px wide, adapting responsively */
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
+            margin-bottom: 50px;
         }
 
         /* --- CARD STYLING --- */
@@ -70,7 +85,6 @@
             transition: transform 0.3s ease;
             display: flex;
             flex-direction: column;
-            border-bottom: 5px solid var(--accent-color); /* Added accent bottom border for flair */
         }
 
         .article-card:hover {
@@ -79,53 +93,54 @@
 
         .img-placeholder {
             width: 100%;
-            height: 200px;
-            background-color: #74b9ff; /* Slightly different blue for Env images */
-            opacity: 0.3;
+            height: 180px;
+            background-color: #74b9ff; 
+            opacity: 0.8;
             display: flex;
             align-items: center;
             justify-content: center;
             color: var(--primary-dark);
             font-weight: 600;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
         }
 
         .card-content {
-            padding: 25px;
+            padding: 20px;
             display: flex;
             flex-direction: column;
             flex-grow: 1;
         }
 
         .article-card h3 {
-            font-size: 1.4rem;
-            margin-bottom: 10px;
+            font-size: 1.3rem;
+            margin-bottom: 8px;
             color: var(--primary-dark);
         }
 
         .article-card p {
             color: #636e72;
-            font-size: 0.95rem;
-            margin-bottom: 20px;
-            line-height: 1.5;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            line-height: 1.4;
         }
 
-        .view-btn {
+        .subtopic-btn {
             margin-top: auto;
             display: inline-block;
-            padding: 10px 20px;
-            background-color: var(--primary-color);
-            color: var(--text-light);
+            padding: 10px 15px;
+            background-color: var(--accent-color);
+            color: var(--primary-dark);
             border-radius: 5px;
             text-align: center;
-            font-weight: 500;
+            font-weight: 600;
             transition: background 0.3s ease;
             border: none;
             cursor: pointer;
         }
 
-        .view-btn:hover {
+        .subtopic-btn:hover {
             background-color: var(--accent-hover);
+            color: var(--text-light);
         }
 
         /* --- FOOTER --- */
@@ -168,43 +183,140 @@
     </header>
 
     <section class="page-header">
-        <h1>Sustainable Tech</h1>
-        <p>Exploring how we can minimize our digital footprint and embrace a greener future.</p>
+        <h1>Global Environmental Focus</h1>
+        <p>Deep dives into sustainability, climate action, and the intersection of technology with ecological responsibility. We have 12 major topics covered below.</p>
     </section>
 
     <main class="env-container">
         
-        <article class="article-card">
-            <div class="img-placeholder">E-Waste Image</div>
-            <div class="card-content">
-                <h3>Responsible Recycling</h3>
-                <p>E-waste is a growing crisis. Learn where and how to safely dispose of your old batteries, phones, and laptops.</p>
-                <button class="view-btn">View Tip</button>
-            </div>
-        </article>
+        <h2 class="group-header">E-Waste & Responsible Disposal</h2>
+        <div class="article-grid">
+            
+            <article class="article-card">
+                <div class="img-placeholder">E-Waste Image 1</div>
+                <div class="card-content">
+                    <h3>Understanding E-Waste</h3>
+                    <p>What electronic waste is, why it's harmful, and its impact on global health and natural resources.</p>
+                    <button class="subtopic-btn">To Sub-topics</button>
+                </div>
+            </article>
 
-        <article class="article-card">
-            <div class="img-placeholder">Energy Image</div>
-            <div class="card-content">
-                <h3>Green Computing</h3>
-                <p>Simple settings adjustments on your PC and smart home devices that reduce energy consumption and save you money.</p>
-                <button class="view-btn">View Tip</button>
-            </div>
-        </article>
+            <article class="article-card">
+                <div class="img-placeholder">E-Waste Image 2</div>
+                <div class="card-content">
+                    <h3>Certified Recycling Programs</h3>
+                    <p>How to find accredited facilities and ensuring your devices are dismantled in an environmentally sound way.</p>
+                    <button class="subtopic-btn">To Sub-topics</button>
+                </div>
+            </article>
 
-        <article class="article-card">
-            <div class="img-placeholder">Materials Image</div>
-            <div class="card-content">
-                <h3>Eco-Friendly Gadgets</h3>
-                <p>A guide to purchasing tech made from recycled plastics and sustainable materials for a cleaner earth.</p>
-                <button class="view-btn">View Tip</button>
-            </div>
-        </article>
+            <article class="article-card">
+                <div class="img-placeholder">E-Waste Image 3</div>
+                <div class="card-content">
+                    <h3>Data Security & Disposal</h3>
+                    <p>Securely wiping personal data before recycling or donating devices to protect your privacy.</p>
+                    <button class="subtopic-btn">To Sub-topics</button>
+                </div>
+            </article>
+        </div>
 
+        <h2 class="group-header">Energy Efficiency & Green Computing</h2>
+        <div class="article-grid">
+            
+            <article class="article-card">
+                <div class="img-placeholder">Energy Image 1</div>
+                <div class="card-content">
+                    <h3>Low Power Modes</h3>
+                    <p>Optimizing operating system and application settings to minimize energy draw without sacrificing productivity.</p>
+                    <button class="subtopic-btn">To Sub-topics</button>
+                </div>
+            </article>
+
+            <article class="article-card">
+                <div class="img-placeholder">Energy Image 2</div>
+                <div class="card-content">
+                    <h3>Data Center Footprint</h3>
+                    <p>Understanding the massive power requirements of cloud computing and supporting green hosting providers.</p>
+                    <button class="subtopic-btn">To Sub-topics</button>
+                </div>
+            </article>
+
+            <article class="article-card">
+                <div class="img-placeholder">Energy Image 3</div>
+                <div class="card-content">
+                    <h3>Phantom Power Solutions</h3>
+                    <p>Identifying and eliminating 'vampire' energy usage from devices left plugged in but turned off.</p>
+                    <button class="subtopic-btn">To Sub-topics</button>
+                </div>
+            </article>
+        </div>
+
+        <h2 class="group-header">Sustainable Materials & Production</h2>
+        <div class="article-grid">
+            
+            <article class="article-card">
+                <div class="img-placeholder">Materials Image 1</div>
+                <div class="card-content">
+                    <h3>Conflict Minerals</h3>
+                    <p>Tracing raw materials used in tech and supporting companies committed to ethical and conflict-free sourcing.</p>
+                    <button class="subtopic-btn">To Sub-topics</button>
+                </div>
+            </article>
+
+            <article class="article-card">
+                <div class="img-placeholder">Materials Image 2</div>
+                <div class="card-content">
+                    <h3>The Right to Repair</h3>
+                    <p>Advocating for legislative changes and supporting manufacturers that offer easily replaceable parts.</p>
+                    <button class="subtopic-btn">To Sub-topics</button>
+                </div>
+            </article>
+
+            <article class="article-card">
+                <div class="img-placeholder">Materials Image 3</div>
+                <div class="card-content">
+                    <h3>Bioplastics in Tech</h3>
+                    <p>The rise of plant-based and recycled plastics in phone cases, components, and packaging.</p>
+                    <button class="subtopic-btn">To Sub-topics</button>
+                </div>
+            </article>
+        </div>
+
+        <h2 class="group-header">Digital Tools for Climate Action</h2>
+        <div class="article-grid">
+            
+            <article class="article-card">
+                <div class="img-placeholder">Tools Image 1</div>
+                <div class="card-content">
+                    <h3>Tracking Your Carbon Footprint</h3>
+                    <p>Using apps and online tools to measure and offset your personal environmental impact.</p>
+                    <button class="subtopic-btn">To Sub-topics</button>
+                </div>
+            </article>
+
+            <article class="article-card">
+                <div class="img-placeholder">Tools Image 2</div>
+                <div class="card-content">
+                    <h3>Citizen Science & Monitoring</h3>
+                    <p>How simple tech (like mobile apps) enables everyday users to contribute to environmental research.</p>
+                    <button class="subtopic-btn">To Sub-topics</button>
+                </div>
+            </article>
+
+            <article class="article-card">
+                <div class="img-placeholder">Tools Image 3</div>
+                <div class="card-content">
+                    <h3>Sustainable Supply Chains</h3>
+                    <p>Blockchain and AI applications used by companies to verify ethical sourcing and reduce waste in logistics.</p>
+                    <button class="subtopic-btn">To Sub-topics</button>
+                </div>
+            </article>
+        </div>
+        
     </main>
 
     <footer>
-        <p>&copy; 2024 Digital Horizons. All Rights Reserved.</p>
+        <p>&copy; 2025 Digital Horizons. All Rights Reserved.</p>
         <div class="social-links">
             <a href="#" class="social-icon">FB</a>
             <a href="#" class="social-icon">TW</a>
