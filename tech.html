@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Horizons | Tech Tips</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- CSS VARIABLES (Same as Home Page) --- */
+        :root {
+            --primary-color: #4834d4;
+            --primary-dark: #301b9e;
+            --accent-color: #00d2d3;
+            --accent-hover: #01a3a4;
+            --text-dark: #2d3436;
+            --text-light: #ffffff;
+            --bg-light: #f5f6fa;
+            --bg-white: #ffffff;
+            --shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; background-color: var(--bg-light); color: var(--text-dark); line-height: 1.6; }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+
+        /* --- NAVIGATION (Same as Home Page) --- */
+        header { background-color: var(--primary-color); height: 70px; width: 100%; position: sticky; top: 0; z-index: 1000; box-shadow: var(--shadow); }
+        nav { max-width: 1200px; margin: 0 auto; height: 100%; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
+        .logo { font-size: 1.5rem; font-weight: 700; color: var(--text-light); letter-spacing: 1px; }
+        .logo span { color: var(--accent-color); }
+        .nav-links { display: flex; gap: 30px; }
+        .nav-links li a { color: var(--text-light); font-weight: 500; transition: color 0.3s ease; }
+        .nav-links li a:hover { color: var(--accent-color); }

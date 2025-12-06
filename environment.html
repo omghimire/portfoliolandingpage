@@ -1,0 +1,236 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Horizons | Environment</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- CSS VARIABLES (Consistent Theme) --- */
+        :root {
+            --primary-color: #4834d4; /* Deep Indigo */
+            --primary-dark: #301b9e;
+            --accent-color: #00d2d3; /* Electric Cyan */
+            --accent-hover: #01a3a4;
+            --text-dark: #2d3436;
+            --text-light: #ffffff;
+            --bg-light: #f5f6fa;
+            --bg-white: #ffffff;
+            --shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; background-color: var(--bg-light); color: var(--text-dark); line-height: 1.6; }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+
+        /* --- NAVIGATION --- */
+        header { background-color: var(--primary-color); height: 70px; width: 100%; position: sticky; top: 0; z-index: 1000; box-shadow: var(--shadow); }
+        nav { max-width: 1200px; margin: 0 auto; height: 100%; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
+        .logo { font-size: 1.5rem; font-weight: 700; color: var(--text-light); letter-spacing: 1px; }
+        .logo span { color: var(--accent-color); }
+        .nav-links { display: flex; gap: 30px; }
+        .nav-links li a { color: var(--text-light); font-weight: 500; transition: color 0.3s ease; }
+        .nav-links li a:hover { color: var(--accent-color); }
+        
+        /* Hamburger Menu */
+        .hamburger { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
+        .bar { width: 25px; height: 3px; background-color: var(--text-light); transition: all 0.3s ease; }
+
+        /* --- PAGE HEADER --- */
+        .page-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            color: var(--text-light);
+            text-align: center;
+            padding: 60px 20px;
+            margin-bottom: 50px;
+        }
+
+        .page-header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .page-header p { opacity: 0.9; max-width: 600px; margin: 0 auto; }
+
+        /* --- ENVIRONMENT GRID CONTAINER --- */
+        .env-container {
+            max-width: 1200px;
+            margin: 0 auto 80px auto;
+            padding: 0 20px;
+            display: grid;
+            /* Responsive Grid Logic */
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        /* --- CARD STYLING --- */
+        .article-card {
+            background: var(--bg-white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            border-bottom: 5px solid var(--accent-color); /* Added accent bottom border for flair */
+        }
+
+        .article-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .img-placeholder {
+            width: 100%;
+            height: 200px;
+            background-color: #74b9ff; /* Slightly different blue for Env images */
+            opacity: 0.3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-dark);
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        .card-content {
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .article-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: var(--primary-dark);
+        }
+
+        .article-card p {
+            color: #636e72;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .view-btn {
+            margin-top: auto;
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            border-radius: 5px;
+            text-align: center;
+            font-weight: 500;
+            transition: background 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .view-btn:hover {
+            background-color: var(--accent-hover);
+        }
+
+        /* --- FOOTER --- */
+        footer { background-color: var(--text-dark); color: var(--text-light); text-align: center; padding: 40px 20px; margin-top: auto; }
+        .social-links { margin-top: 20px; display: flex; justify-content: center; gap: 20px; }
+        .social-icon { width: 40px; height: 40px; background-color: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: background-color 0.3s; }
+        .social-icon:hover { background-color: var(--accent-color); }
+
+        /* --- RESPONSIVE MEDIA QUERIES --- */
+        @media screen and (max-width: 768px) {
+            .hamburger { display: flex; z-index: 1001; }
+            .nav-links { position: fixed; top: 0; right: -100%; height: 100vh; width: 70%; background-color: var(--primary-dark); flex-direction: column; justify-content: center; align-items: center; transition: right 0.4s ease-in-out; box-shadow: -5px 0 15px rgba(0,0,0,0.2); }
+            .nav-links.active { right: 0; }
+            .nav-links li a { font-size: 1.5rem; }
+            .hamburger.toggle .bar:nth-child(1) { transform: rotate(-45deg) translate(-5px, 6px); }
+            .hamburger.toggle .bar:nth-child(2) { opacity: 0; }
+            .hamburger.toggle .bar:nth-child(3) { transform: rotate(45deg) translate(-5px, -6px); }
+            
+            .page-header h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Digital<span>Horizons</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tech.html">Tech Tips</a></li>
+                <li><a href="env.html">Environment</a></li> <li><a href="about.html">About Me</a></li>
+            </ul>
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <h1>Sustainable Tech</h1>
+        <p>Exploring how we can minimize our digital footprint and embrace a greener future.</p>
+    </section>
+
+    <main class="env-container">
+        
+        <article class="article-card">
+            <div class="img-placeholder">E-Waste Image</div>
+            <div class="card-content">
+                <h3>Responsible Recycling</h3>
+                <p>E-waste is a growing crisis. Learn where and how to safely dispose of your old batteries, phones, and laptops.</p>
+                <button class="view-btn">View Tip</button>
+            </div>
+        </article>
+
+        <article class="article-card">
+            <div class="img-placeholder">Energy Image</div>
+            <div class="card-content">
+                <h3>Green Computing</h3>
+                <p>Simple settings adjustments on your PC and smart home devices that reduce energy consumption and save you money.</p>
+                <button class="view-btn">View Tip</button>
+            </div>
+        </article>
+
+        <article class="article-card">
+            <div class="img-placeholder">Materials Image</div>
+            <div class="card-content">
+                <h3>Eco-Friendly Gadgets</h3>
+                <p>A guide to purchasing tech made from recycled plastics and sustainable materials for a cleaner earth.</p>
+                <button class="view-btn">View Tip</button>
+            </div>
+        </article>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Digital Horizons. All Rights Reserved.</p>
+        <div class="social-links">
+            <a href="#" class="social-icon">FB</a>
+            <a href="#" class="social-icon">TW</a>
+            <a href="#" class="social-icon">IG</a>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navLinks = document.querySelector(".nav-links");
+        const links = document.querySelectorAll(".nav-links li");
+
+        // Toggle Menu
+        hamburger.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+            hamburger.classList.toggle("toggle");
+        });
+
+        // Close menu on link click
+        links.forEach(link => {
+            link.addEventListener("click", () => {
+                navLinks.classList.remove("active");
+                hamburger.classList.remove("toggle");
+            });
+        });
+    </script>
+
+</body>
+</html>
