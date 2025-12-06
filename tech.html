@@ -7,11 +7,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     
     <style>
-        /* --- CSS VARIABLES (Same as Home Page) --- */
+        /* --- CSS VARIABLES (Consistent Theme) --- */
         :root {
-            --primary-color: #4834d4;
+            --primary-color: #4834d4; /* Deep Indigo */
             --primary-dark: #301b9e;
-            --accent-color: #00d2d3;
+            --accent-color: #00d2d3; /* Electric Cyan */
             --accent-hover: #01a3a4;
             --text-dark: #2d3436;
             --text-light: #ffffff;
@@ -25,7 +25,7 @@
         a { text-decoration: none; color: inherit; }
         ul { list-style: none; }
 
-        /* --- NAVIGATION (Same as Home Page) --- */
+        /* --- NAVIGATION --- */
         header { background-color: var(--primary-color); height: 70px; width: 100%; position: sticky; top: 0; z-index: 1000; box-shadow: var(--shadow); }
         nav { max-width: 1200px; margin: 0 auto; height: 100%; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
         .logo { font-size: 1.5rem; font-weight: 700; color: var(--text-light); letter-spacing: 1px; }
@@ -48,24 +48,38 @@
         }
 
         .page-header h1 { font-size: 2.5rem; margin-bottom: 10px; }
-        .page-header p { opacity: 0.9; max-width: 600px; margin: 0 auto; }
+        .page-header p { opacity: 0.9; max-width: 800px; margin: 0 auto; }
 
-        /* --- TECH TIPS GRID --- */
+        /* --- TECH TIPS GRID CONTAINER --- */
         .tech-container {
             max-width: 1200px;
             margin: 0 auto 80px auto;
             padding: 0 20px;
-            display: grid;
-            /* Responsive Grid: Creates as many columns as fit (min 300px wide) */
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+        }
+        
+        /* Grouping Headers */
+        .group-header {
+            font-size: 2rem;
+            color: var(--primary-dark);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+            margin: 40px 0 30px 0;
+            font-weight: 600;
         }
 
-        /* --- ARTICLE CARD STYLING --- */
+        /* Responsive Grid Logic for 3 columns on desktop, adapts smaller */
+        .article-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        /* --- CARD STYLING --- */
         .article-card {
             background: var(--bg-white);
             border-radius: 15px;
-            overflow: hidden; /* Keeps image inside rounded corners */
+            overflow: hidden;
             box-shadow: var(--shadow);
             transition: transform 0.3s ease;
             display: flex;
@@ -78,64 +92,56 @@
 
         .img-placeholder {
             width: 100%;
-            height: 200px;
+            height: 180px;
             background-color: #dfe6e9; /* Light grey placeholder */
+            opacity: 0.9;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #636e72;
+            color: var(--primary-dark);
             font-weight: 600;
-            font-size: 1.2rem;
-            position: relative;
-        }
-        
-        /* Optional: Add an overlay effect on hover */
-        .img-placeholder::after {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(72, 52, 212, 0.1);
+            font-size: 1.1rem;
         }
 
         .card-content {
-            padding: 25px;
+            padding: 20px;
             display: flex;
             flex-direction: column;
-            flex-grow: 1; /* Pushes button to bottom if text is short */
+            flex-grow: 1;
         }
 
         .article-card h3 {
-            font-size: 1.4rem;
-            margin-bottom: 10px;
+            font-size: 1.3rem;
+            margin-bottom: 8px;
             color: var(--primary-dark);
         }
 
         .article-card p {
             color: #636e72;
-            font-size: 0.95rem;
-            margin-bottom: 20px;
-            line-height: 1.5;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            line-height: 1.4;
         }
 
-        .view-btn {
-            margin-top: auto; /* Pushes button to the bottom */
+        .topic-btn {
+            margin-top: auto;
             display: inline-block;
-            padding: 10px 20px;
+            padding: 10px 15px;
             background-color: var(--primary-color);
             color: var(--text-light);
             border-radius: 5px;
             text-align: center;
-            font-weight: 500;
+            font-weight: 600;
             transition: background 0.3s ease;
             border: none;
             cursor: pointer;
         }
 
-        .view-btn:hover {
-            background-color: var(--accent-hover);
+        .topic-btn:hover {
+            background-color: var(--primary-dark);
         }
 
-        /* --- FOOTER (Same as Home Page) --- */
+        /* --- FOOTER --- */
         footer { background-color: var(--text-dark); color: var(--text-light); text-align: center; padding: 40px 20px; margin-top: auto; }
         .social-links { margin-top: 20px; display: flex; justify-content: center; gap: 20px; }
         .social-icon { width: 40px; height: 40px; background-color: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: background-color 0.3s; }
@@ -151,7 +157,6 @@
             .hamburger.toggle .bar:nth-child(2) { opacity: 0; }
             .hamburger.toggle .bar:nth-child(3) { transform: rotate(45deg) translate(-5px, -6px); }
             
-            /* Adjust header for mobile */
             .page-header h1 { font-size: 2rem; }
         }
     </style>
@@ -164,7 +169,7 @@
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="tech.html">Tech Tips</a></li>
-                <li><a href="environment.html">Environment</a></li>
+                <li><a href="environment.html">Environment</a></li> 
                 <li><a href="about.html">About Me</a></li>
             </ul>
             <div class="hamburger">
@@ -176,39 +181,136 @@
     </header>
 
     <section class="page-header">
-        <h1>Tech Tips & Tricks</h1>
-        <p>Unlock the full potential of your devices with these simple guides.</p>
+        <h1>Essential Tech Tips & Deep Dives</h1>
+        <p>Expert advice on security, performance, software mastery, and productivity tools.</p>
     </section>
 
     <main class="tech-container">
         
-        <article class="article-card">
-            <div class="img-placeholder">Image 1</div>
-            <div class="card-content">
-                <h3>Boost Your Productivity</h3>
-                <p>Discover the top 5 keyboard shortcuts for VS Code and Windows 11 that will save you hours of work every week.</p>
-                <button class="view-btn">View Tip</button>
-            </div>
-        </article>
+        <h2 class="group-header">PC Performance & Maintenance</h2>
+        <div class="article-grid">
+            
+            <article class="article-card">
+                <div class="img-placeholder">Performance Tip 1</div>
+                <div class="card-content">
+                    <h3>Mastering Startup Apps</h3>
+                    <p>Identify and disable unnecessary programs that slow down your computer's boot time significantly.</p>
+                    <a href="vlog.html"><button class="topic-btn">To the topic</button></a>
+                </div>
+            </article>
 
-        <article class="article-card">
-            <div class="img-placeholder">Image 2</div>
-            <div class="card-content">
-                <h3>Cybersecurity 101</h3>
-                <p>Learn the basics of password management and two-factor authentication to keep your digital life secure.</p>
-                <button class="view-btn">View Tip</button>
-            </div>
-        </article>
+            <article class="article-card">
+                <div class="img-placeholder">Performance Tip 2</div>
+                <div class="card-content">
+                    <h3>Disk Cleanup Routines</h3>
+                    <p>A step-by-step guide to safely clearing cache, temporary files, and obsolete system files for space.</p>
+                    <button class="topic-btn">To the topic</button>
+                </div>
+            </article>
 
-        <article class="article-card">
-            <div class="img-placeholder">Image 3</div>
-            <div class="card-content">
-                <h3>Speed Up Your PC</h3>
-                <p>Is your computer running slow? Here are three non-destructive ways to clean up cache files and optimize performance.</p>
-                <button class="view-btn">View Tip</button>
-            </div>
-        </article>
+            <article class="article-card">
+                <div class="img-placeholder">Performance Tip 3</div>
+                <div class="card-content">
+                    <h3>RAM vs. SSD Explained</h3>
+                    <p>Understanding where the real bottlenecks are in your system and how to prioritize upgrades effectively.</p>
+                    <button class="topic-btn">To the topic</button>
+                </div>
+            </article>
+        </div>
 
+        <h2 class="group-header">Cybersecurity Fundamentals</h2>
+        <div class="article-grid">
+            
+            <article class="article-card">
+                <div class="img-placeholder">Security Tip 1</div>
+                <div class="card-content">
+                    <h3>Multi-Factor Authentication</h3>
+                    <p>The definitive guide to setting up 2FA/MFA on all your critical accounts for maximum protection.</p>
+                    <button class="topic-btn">To the topic</button>
+                </div>
+            </article>
+
+            <article class="article-card">
+                <div class="img-placeholder">Security Tip 2</div>
+                <div class="card-content">
+                    <h3>Phishing and Scams</h3>
+                    <p>Learn to identify the latest techniques used by scammers in email, text, and social media.</p>
+                    <button class="topic-btn">To the topic</button>
+                </div>
+            </article>
+
+            <article class="article-card">
+                <div class="img-placeholder">Security Tip 3</div>
+                <div class="card-content">
+                    <h3>VPNs: When and Why?</h3>
+                    <p>A simple explanation of Virtual Private Networks and when they are essential for your privacy.</p>
+                    <button class="topic-btn">To the topic</button>
+                </div>
+            </article>
+        </div>
+
+        <h2 class="group-header">Software Mastery & Productivity</h2>
+        <div class="article-grid">
+            
+            <article class="article-card">
+                <div class="img-placeholder">Software Tip 1</div>
+                <div class="card-content">
+                    <h3>Advanced Spreadsheet Formulas</h3>
+                    <p>Unlock complex data analysis using VLOOKUP, INDEX/MATCH, and pivot table fundamentals.</p>
+                    <button class="topic-btn">To the topic</button>
+                </div>
+            </article>
+
+            <article class="article-card">
+                <div class="img-placeholder">Software Tip 2</div>
+                <div class="card-content">
+                    <h3>Cloud Storage Organization</h3>
+                    <p>Best practices for managing files across Google Drive, OneDrive, and Dropbox efficiently.</p>
+                    <button class="topic-btn">To the topic</button>
+                </div>
+            </article>
+
+            <article class="article-card">
+                <div class="img-placeholder">Software Tip 3</div>
+                <div class="card-content">
+                    <h3>Notetaking Systems (Zettelkasten)</h3>
+                    <p>Explore powerful methods for linking ideas and knowledge using digital notetaking apps.</p>
+                    <button class="topic-btn">To the topic</button>
+                </div>
+            </article>
+        </div>
+
+        <h2 class="group-header">Networking & Internet Optimization</h2>
+        <div class="article-grid">
+            
+            <article class="article-card">
+                <div class="img-placeholder">Network Tip 1</div>
+                <div class="card-content">
+                    <h3>Boosting Wi-Fi Range</h3>
+                    <p>Tips for router placement, channel selection, and using mesh systems to eliminate dead zones.</p>
+                    <button class="topic-btn">To the topic</button>
+                </div>
+            </article>
+
+            <article class="article-card">
+                <div class="img-placeholder">Network Tip 2</div>
+                <div class="card-content">
+                    <h3>Understanding IPv6</h3>
+                    <p>A simple breakdown of the latest internet protocol and why it matters for future connectivity.</p>
+                    <button class="topic-btn">To the topic</button>
+                </div>
+            </article>
+
+            <article class="article-card">
+                <div class="img-placeholder">Network Tip 3</div>
+                <div class="card-content">
+                    <h3>DNS Speed Comparison</h3>
+                    <p>How changing your DNS server can affect loading times and security, and which ones to choose.</p>
+                    <button class="topic-btn">To the topic</button>
+                </div>
+            </article>
+        </div>
+        
     </main>
 
     <footer>
@@ -225,11 +327,13 @@
         const navLinks = document.querySelector(".nav-links");
         const links = document.querySelectorAll(".nav-links li");
 
+        // Toggle Menu
         hamburger.addEventListener("click", () => {
             navLinks.classList.toggle("active");
             hamburger.classList.toggle("toggle");
         });
 
+        // Close menu on link click
         links.forEach(link => {
             link.addEventListener("click", () => {
                 navLinks.classList.remove("active");

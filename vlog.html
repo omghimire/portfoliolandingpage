@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Horizons | Vlog</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- CSS VARIABLES (Consistent Theme) --- */
+        :root {
+            --primary-color: #4834d4; /* Deep Indigo */
+            --primary-dark: #301b9e;
+            --accent-color: #00d2d3; /* Electric Cyan */
+            --accent-hover: #01a3a4;
+            --text-dark: #2d3436;
+            --text-light: #ffffff;
+            --bg-light: #f5f6fa;
+            --bg-white: #ffffff;
+            --shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; background-color: var(--bg-light); color: var(--text-dark); line-height: 1.6; }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+
+        /* --- NAVIGATION --- */
+        header { background-color: var(--primary-color); height: 70px; width: 100%; position: sticky; top: 0; z-index: 1000; box-shadow: var(--shadow); }
+        nav { max-width: 1200px; margin: 0 auto; height: 100%; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
+        .logo { font-size: 1.5rem; font-weight: 700; color: var(--text-light); letter-spacing: 1px; }
+        .logo span { color: var(--accent-color); }
+        .nav-links { display: flex; gap: 30px; }
+        .nav-links li a { color: var(--text-light); font-weight: 500; transition: color 0.3s ease; }
+        .nav-links li a:hover { color: var(--accent-color); }
+        
+        /* Hamburger Menu */
+        .hamburger { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
+        .bar { width: 25px; height: 3px; background-color: var(--text-light); transition: all 0.3s ease; }
+
+        /* --- PAGE HEADER --- */
+        .page-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            color: var(--text-light);
+            text-align: center;
+            padding: 60px 20px;
+            margin-bottom: 50px;
+        }
+
+        .page-header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .page-header p { opacity: 0.9; max-width: 800px; margin: 0 auto; }
+
+        /* --- VLOG POST CONTAINER --- */
+        .vlog-container {
+            max-width: 1000px;
+            margin: 0 auto 80px auto;
+            padding: 40px;
+            background: var(--bg-white);
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+        
+        /* Main Post Title */
+        .vlog-title {
+            font-size: 2.5rem;
+            color: var(--primary-dark);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        /* Content Flex Layout (Image + Text) */
+        .content-flex {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .content-text {
+            flex: 1; /* Allows text to grow */
+        }
+
+        /* IMPORTANT: Justified Alignment for Text */
+        .content-text p {
+            font-size: 1.1rem;
+            margin-top: 15px;
+            color: #555;
+            text-align: justify; /* *** ADDED JUSTIFY ALIGNMENT *** */
+        }
+
+        .content-image-placeholder {
+            flex: 0 0 350px; /* Fixed width for the image placeholder on desktop */
+            height: 250px;
+            background-color: var(--accent-color);
+            opacity: 0.7;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-dark);
+            font-weight: 600;
+        }
+        
+        /* Link Section Styling */
+        .link-section {
+            border-top: 2px dashed #e0e0e0;
+            padding-top: 30px;
+        }
+
+        .link-section h3 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .youtube-links li {
+            margin-bottom: 10px;
+        }
+
+        .youtube-links a {
+            color: var(--accent-hover);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .youtube-links a:hover {
+            color: var(--primary-dark);
+            text-decoration: underline;
+        }
+
+        /* --- CREATOR INFO SECTION --- */
+        .creator-info {
+            display: flex;
+            align-items: center;
+            margin-top: 40px;
+            padding: 20px;
+            border-top: 1px solid #f0f0f0;
+        }
+
+        .creator-pic {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            border: 3px solid var(--accent-color);
+            margin-right: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            font-size: 0.8rem;
+        }
+
+        .creator-name h4 {
+            font-size: 1.2rem;
+            color: var(--primary-dark);
+            margin: 0;
+        }
+        
+        /* --- FOOTER --- */
+        footer { background-color: var(--text-dark); color: var(--text-light); text-align: center; padding: 40px 20px; margin-top: auto; }
+        .social-links { margin-top: 20px; display: flex; justify-content: center; gap: 20px; }
+        .social-icon { width: 40px; height: 40px; background-color: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: background-color 0.3s; }
+        .social-icon:hover { background-color: var(--accent-color); }
+
+        /* --- RESPONSIVE MEDIA QUERIES --- */
+        @media screen and (max-width: 768px) {
+            .hamburger { display: flex; z-index: 1001; }
+            .nav-links { position: fixed; top: 0; right: -100%; height: 100vh; width: 70%; background-color: var(--primary-dark); flex-direction: column; justify-content: center; align-items: center; transition: right 0.4s ease-in-out; box-shadow: -5px 0 15px rgba(0,0,0,0.2); }
+            .nav-links.active { right: 0; }
+            .nav-links li a { font-size: 1.5rem; }
+            .hamburger.toggle .bar:nth-child(1) { transform: rotate(-45deg) translate(-5px, 6px); }
+            .hamburger.toggle .bar:nth-child(2) { opacity: 0; }
+            .hamburger.toggle .bar:nth-child(3) { transform: rotate(45deg) translate(-5px, -6px); }
+            
+            .page-header h1 { font-size: 2rem; }
+            .vlog-container { padding: 20px; }
+
+            /* Mobile: Stack Image and Text */
+            .content-flex {
+                flex-direction: column;
+            }
+            .content-image-placeholder {
+                flex: 1 1 auto; /* Allow it to take full width */
+                width: 100%;
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Digital<span>Horizons</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tech.html">Tech Tips</a></li>
+                <li><a href="environment.html">Environment</a></li> 
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="vlog.html">Vlog</a></li>
+            </ul>
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <h1>Latest Deep Dive: The Future of Green Tech</h1>
+        <p>A video and written exploration of the newest innovations in sustainable technology, from gadgets to data centers.</p>
+    </section>
+
+    <main class="vlog-container">
+        
+        <h2 class="vlog-title">Vlog Post Title: Sustainable Energy Hacking</h2>
+        
+        <div class="content-flex">
+            <div class="content-text">
+                <p>In this week's deep dive, we explore how minor software tweaks can lead to significant energy savings. We cover everything from optimizing processor sleep states to understanding the carbon cost of different cloud services. The written content below serves as a detailed transcript and supplement to the video discussion, providing links and resources mentioned. This is a crucial area for anyone looking to reduce their digital footprint. While hardware efficiency improves year over year, the way we manage software, background processes, and network connectivity remains the single biggest factor influencing the total power draw of our systems. By applying the principles discussed here, you can make a substantial, measurable difference in your energy consumption, contributing to a healthier environment while also extending the lifespan and performance of your devices.</p>
+                <p>The goal is not just to be aware of consumption, but to actively manage it, turning passive devices into power-efficient allies. Make sure to check out the links below for the full video and related articles!</p>
+            </div>
+
+            <div class="content-image-placeholder">
+                [Insert Vlog Thumbnail / Featured Image Here]
+            </div>
+        </div>
+
+        <div class="link-section">
+            <h3>🔗 External Resources & Full Video</h3>
+            <ul class="youtube-links">
+                <li><a href="[YOUTUBE_LINK_1]">Full Video: Energy Hacking for Beginners (YouTube)</a></li>
+                <li><a href="[YOUTUBE_LINK_2]">Related Article: 5 Quick Tips to Reduce Laptop Power Draw</a></li>
+                <li><a href="[YOUTUBE_LINK_3]">Creator Channel: Subscribe for More Deep Dives</a></li>
+            </ul>
+        </div>
+
+        <div class="creator-info">
+            <div class="creator-pic">
+                [Pic]
+            </div>
+            <div class="creator-name">
+                <h4>Created by: Alex Johnson</h4>
+                <p>Digital Horizons Founder & Lead Technologist</p>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Digital Horizons. All Rights Reserved.</p>
+        <div class="social-links">
+            <a href="#" class="social-icon">FB</a>
+            <a href="#" class="social-icon">TW</a>
+            <a href="#" class="social-icon">IG</a>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navLinks = document.querySelector(".nav-links");
+        const links = document.querySelectorAll(".nav-links li");
+
+        // Toggle Menu
+        hamburger.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+            hamburger.classList.toggle("toggle");
+        });
+
+        // Close menu on link click
+        links.forEach(link => {
+            link.addEventListener("click", () => {
+                navLinks.classList.remove("active");
+                hamburger.classList.remove("toggle");
+            });
+        });
+    </script>
+
+</body>
+</html>

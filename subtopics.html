@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Horizons | Sub-topics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- CSS VARIABLES (Consistent Theme) --- */
+        :root {
+            --primary-color: #4834d4; /* Deep Indigo */
+            --primary-dark: #301b9e;
+            --accent-color: #00d2d3; /* Electric Cyan */
+            --accent-hover: #01a3a4;
+            --text-dark: #2d3436;
+            --text-light: #ffffff;
+            --bg-light: #f5f6fa;
+            --bg-white: #ffffff;
+            --shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; background-color: var(--bg-light); color: var(--text-dark); line-height: 1.6; }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+
+        /* --- NAVIGATION --- */
+        header { background-color: var(--primary-color); height: 70px; width: 100%; position: sticky; top: 0; z-index: 1000; box-shadow: var(--shadow); }
+        nav { max-width: 1200px; margin: 0 auto; height: 100%; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
+        .logo { font-size: 1.5rem; font-weight: 700; color: var(--text-light); letter-spacing: 1px; }
+        .logo span { color: var(--accent-color); }
+        .nav-links { display: flex; gap: 30px; }
+        .nav-links li a { color: var(--text-light); font-weight: 500; transition: color 0.3s ease; }
+        .nav-links li a:hover { color: var(--accent-color); }
+        
+        /* Hamburger Menu */
+        .hamburger { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
+        .bar { width: 25px; height: 3px; background-color: var(--text-light); transition: all 0.3s ease; }
+
+        /* --- PAGE HEADER --- */
+        .page-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            color: var(--text-light);
+            text-align: center;
+            padding: 60px 20px;
+            margin-bottom: 50px;
+        }
+
+        .page-header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .page-header p { opacity: 0.9; max-width: 800px; margin: 0 auto; }
+
+        /* --- SUB-TOPICS LIST STYLING --- */
+        .subtopic-container {
+            max-width: 800px;
+            margin: 0 auto 100px auto;
+            padding: 0 20px;
+        }
+
+        .subtopic-list {
+            background: var(--bg-white);
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            padding: 30px 40px;
+            list-style: none;
+        }
+
+        .subtopic-list li {
+            padding: 15px 0;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            align-items: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .subtopic-list li:hover {
+            background-color: #fafafa;
+            padding-left: 10px;
+        }
+
+        .subtopic-list li:last-child {
+            border-bottom: none;
+        }
+
+        .subtopic-list li a {
+            font-size: 1.15rem;
+            font-weight: 500;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+
+        /* List Icon Styling */
+        .subtopic-list li a::before {
+            content: '🔗'; /* Link emoji for visual interest */
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            margin-right: 15px;
+        }
+
+        .subtopic-list li a:hover {
+            color: var(--primary-color);
+        }
+        
+        /* --- FOOTER --- */
+        footer { background-color: var(--text-dark); color: var(--text-light); text-align: center; padding: 40px 20px; margin-top: auto; }
+        .social-links { margin-top: 20px; display: flex; justify-content: center; gap: 20px; }
+        .social-icon { width: 40px; height: 40px; background-color: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: background-color 0.3s; }
+        .social-icon:hover { background-color: var(--accent-color); }
+
+        /* --- RESPONSIVE MEDIA QUERIES --- */
+        @media screen and (max-width: 768px) {
+            .hamburger { display: flex; z-index: 1001; }
+            .nav-links { position: fixed; top: 0; right: -100%; height: 100vh; width: 70%; background-color: var(--primary-dark); flex-direction: column; justify-content: center; align-items: center; transition: right 0.4s ease-in-out; box-shadow: -5px 0 15px rgba(0,0,0,0.2); }
+            .nav-links.active { right: 0; }
+            .nav-links li a { font-size: 1.5rem; }
+            .hamburger.toggle .bar:nth-child(1) { transform: rotate(-45deg) translate(-5px, 6px); }
+            .hamburger.toggle .bar:nth-child(2) { opacity: 0; }
+            .hamburger.toggle .bar:nth-child(3) { transform: rotate(45deg) translate(-5px, -6px); }
+            
+            .page-header h1 { font-size: 2rem; }
+            .subtopic-list { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Digital<span>Horizons</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tech.html">Tech Tips</a></li>
+                <li><a href="environment.html">Environment</a></li> 
+                <li><a href="about.html">About Me</a></li>
+            </ul>
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <h1>Detailed Sub-Topics Index</h1>
+        <p>A comprehensive list of every topic covered across our Tech and Environment categories.</p>
+    </section>
+
+    <main class="subtopic-container">
+        <ul class="subtopic-list">
+            <li><a href="vlog.html">1. Responsible E-Waste Disposal Guidelines</a></li>
+            <li><a href="#">2. Advanced Cyber Security Practices</a></li>
+            <li><a href="#">3. Maximizing PC Performance & Speed</a></li>
+            <li><a href="#">4. Sustainable Supply Chain Verification (Blockchain)</a></li>
+            <li><a href="#">5. The Ethics of AI Development</a></li>
+            <li><a href="#">6. Reducing Data Center Carbon Footprint</a></li>
+            <li><a href="#">7. Right-to-Repair Legislation Explained</a></li>
+            <li><a href="#">8. Choosing Conflict-Free Technology Components</a></li>
+            <li><a href="#">9. Mastering Productivity Software (e.g., VS Code)</a></li>
+            <li><a href="#">10. Eliminating Home "Phantom" Energy Draw</a></li>
+            <li><a href="#">11. Bio-plastics and Recycled Materials in Gadgets</a></li>
+            <li><a href="#">12. Citizen Science Initiatives using Mobile Apps</a></li>
+            <li><a href="#">13. Affordable Solar Power for Home Electronics</a></li>
+            <li><a href="#">14. Open Source Hardware and Sustainability</a></li>
+            <li><a href="#">15. Secure Data Wiping Techniques</a></li>
+        </ul>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Digital Horizons. All Rights Reserved.</p>
+        <div class="social-links">
+            <a href="#" class="social-icon">FB</a>
+            <a href="#" class="social-icon">TW</a>
+            <a href="#" class="social-icon">IG</a>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navLinks = document.querySelector(".nav-links");
+        const links = document.querySelectorAll(".nav-links li");
+
+        // Toggle Menu
+        hamburger.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+            hamburger.classList.toggle("toggle");
+        });
+
+        // Close menu on link click
+        links.forEach(link => {
+            link.addEventListener("click", () => {
+                navLinks.classList.remove("active");
+                hamburger.classList.remove("toggle");
+            });
+        });
+    </script>
+
+</body>
+</html>
