@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Horizons | Environment</title>
+    <title>Environment</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     
     <style>
@@ -125,17 +125,21 @@
         }
 
         .subtopic-btn {
-            margin-top: auto;
-            display: inline-block;
-            padding: 10px 15px;
-            background-color: var(--accent-color);
-            color: var(--primary-dark);
-            border-radius: 5px;
-            text-align: center;
-            font-weight: 600;
-            transition: background 0.3s ease;
+           .subtopic-btn {
+            /* 1. Reset Link Styling */
+            text-decoration: none; /* Remove underline */
+            color: white;          /* Set text color */
+
+            /* 2. Add Button Styling */
+            display: inline-block; /* Allows width/height/padding to be applied */
+            padding: 10px 20px;
+            background-color: #007bff; /* Example background color */
             border: none;
+            border-radius: 5px;
             cursor: pointer;
+            font-size: 16px;
+            text-align: center;
+}
         }
 
         .subtopic-btn:hover {
@@ -167,12 +171,12 @@
 
     <header>
         <nav>
-            <div class="logo">Digital<span>Horizons</span></div>
+            <div class="logo">Omprakashghimire<span>.com.np</span></div>
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="tech.html">Tech Tips</a></li>
-                <li><a href="environment.html">Environment</a></li> 
-                <li><a href="about.html">About Me</a></li>
+                <li><a href="index.html">Home गृहपृष्ठ</a></li>
+                <li><a href="tech.html">Tech Tips प्रविधि</a></li>
+                <li><a href="environment.html">Environment वातावरण</a></li> 
+                <li><a href="about.html">About Me मेरो बारेमा</a></li>
             </ul>
             <div class="hamburger">
                 <div class="bar"></div>
@@ -183,132 +187,168 @@
     </header>
 
     <section class="page-header">
-        <h1>Global Environmental Focus</h1>
-        <p>Deep dives into sustainability, climate action, and the intersection of technology with ecological responsibility. We have 12 major topics covered below.</p>
+        <h1>Environmental Topics वातावरणीय विषयहरू</h1>
+        <p>Environmental topics discuss the Earth's natural systems and the impact of human activities. This includes crucial
+        matters like climate change, pollution, wildlife conservation, and sustainable development.</p>
+        <p>वातावरणीय विषयहरूले पृथ्वीको प्राकृतिक प्रणाली र मानव गतिविधिहरूको प्रभावबारे छलफल गर्दछ। यसमा जलवायु परिवर्तन, प्रदूषण,
+        वन्यजन्तु संरक्षण र दिगो विकास जस्ता महत्त्वपूर्ण कुराहरू पर्दछन्।</p>
     </section>
 
     <main class="env-container">
         
-        <h2 class="group-header">E-Waste & Responsible Disposal</h2>
+        
         <div class="article-grid">
             
             <article class="article-card">
-                <div class="img-placeholder">E-Waste Image 1</div>
+                <div class="img-placeholder">Topic 1 (विषय १)</div>
                 <div class="card-content">
-                    <h3>Understanding E-Waste</h3>
-                    <p>What electronic waste is, why it's harmful, and its impact on global health and natural resources.</p>
-                    <button class="subtopic-btn">To Sub-topics</button>
+                    <h3>Climate Change (जलवायु परिवर्तन)</h3>
+                    <p>Climate change is the long-term shift in global weather patterns, primarily driven by human activities that release
+                    greenhouse gases.</p>
+                    <p>जलवायु परिवर्तन मुख्यतया मानव गतिविधिद्वारा उत्सर्जित हरितगृह ग्यासका कारण हुने विश्वव्यापी मौसमी ढाँचामा आउने
+                    दीर्घकालीन परिवर्तन हो।</p>
+                    <a href="Environment/webpages/climatechange.html" class="subtopic-btn">
+                        To Sub-Topics (उप-विषयहरूमा जानुहोस्)
+                    </a>
                 </div>
             </article>
 
             <article class="article-card">
-                <div class="img-placeholder">E-Waste Image 2</div>
+                <div class="img-placeholder"></div>
                 <div class="card-content">
-                    <h3>Certified Recycling Programs</h3>
-                    <p>How to find accredited facilities and ensuring your devices are dismantled in an environmentally sound way.</p>
-                    <button class="subtopic-btn">To Sub-topics</button>
+                    <h3>Biodiversity & Conservation (जैविक विविधता र संरक्षण)</h3>
+                    <p>Biodiversity is the variety of life on Earth, and conservation is the protection and management of this natural heritage
+                    for current and future generations.</p>
+                    <p>जैविक विविधता पृथ्वीमा जीवनको विविधता हो भने संरक्षण भनेको वर्तमान र भविष्यका पुस्ताका लागि यो प्राकृतिक सम्पदाको
+                    सुरक्षा र व्यवस्थापन गर्नु हो।</p>
+                    <a href="subtopics.html" class="subtopic-btn">
+                        To Sub-Topics (उप-विषयहरूमा जानुहोस्)
+                    </a>
                 </div>
             </article>
 
             <article class="article-card">
                 <div class="img-placeholder">E-Waste Image 3</div>
                 <div class="card-content">
-                    <h3>Data Security & Disposal</h3>
-                    <p>Securely wiping personal data before recycling or donating devices to protect your privacy.</p>
-                    <a href="subtopics.html"><button class="subtopic-btn">To Sub-topics</button></a>
+                    <h3>Water Resources & Quality (जल स्रोत र गुणस्तर)</h3>
+                    <p>Water resources include all sources of fresh and saltwater, and quality refers to the chemical, physical, and biological
+                    standards required for human and ecosystem health.</p>
+                    <p>जल स्रोतहरूमा सबै किसिमका ताजा र नुनिलो पानीका स्रोतहरू पर्दछन्, र गुणस्तरले मानव र पारिस्थितिक प्रणालीको स्वास्थ्यका
+                    लागि आवश्यक रासायनिक, भौतिक र जैविक मापदण्डहरूलाई जनाउँछ।</p>
+                    <a href="subtopics.html" class="subtopic-btn">
+                        To Sub-Topics (उप-विषयहरूमा जानुहोस्)
+                    </a>
                 </div>
             </article>
         </div>
 
-        <h2 class="group-header">Energy Efficiency & Green Computing</h2>
+        
         <div class="article-grid">
             
             <article class="article-card">
                 <div class="img-placeholder">Energy Image 1</div>
                 <div class="card-content">
-                    <h3>Low Power Modes</h3>
+                    <h3>Air Pollution & Quality (वायु प्रदूषण र गुणस्तर)</h3>
                     <p>Optimizing operating system and application settings to minimize energy draw without sacrificing productivity.</p>
-                    <button class="subtopic-btn">To Sub-topics</button>
+                    <a href="subtopics.html" class="subtopic-btn">
+                        To Sub-Topics (उप-विषयहरूमा जानुहोस्)
+                    </a>
                 </div>
             </article>
 
             <article class="article-card">
                 <div class="img-placeholder">Energy Image 2</div>
                 <div class="card-content">
-                    <h3>Data Center Footprint</h3>
+                    <h3>Waste Management (फोहोर व्यवस्थापन)</h3>
                     <p>Understanding the massive power requirements of cloud computing and supporting green hosting providers.</p>
-                    <button class="subtopic-btn">To Sub-topics</button>
+                    <a href="subtopics.html" class="subtopic-btn">
+                        To Sub-Topics (उप-विषयहरूमा जानुहोस्)
+                    </a>
                 </div>
             </article>
 
             <article class="article-card">
                 <div class="img-placeholder">Energy Image 3</div>
                 <div class="card-content">
-                    <h3>Phantom Power Solutions</h3>
+                    <h3>Land Use & Degradation (भूमि उपयोग र ह्रास)</h3>
                     <p>Identifying and eliminating 'vampire' energy usage from devices left plugged in but turned off.</p>
-                    <button class="subtopic-btn">To Sub-topics</button>
+                    <a href="subtopics.html" class="subtopic-btn">
+                        To Sub-Topics (उप-विषयहरूमा जानुहोस्)
+                    </a>
                 </div>
             </article>
         </div>
 
-        <h2 class="group-header">Sustainable Materials & Production</h2>
+
         <div class="article-grid">
-            
+    
             <article class="article-card">
                 <div class="img-placeholder">Materials Image 1</div>
                 <div class="card-content">
-                    <h3>Conflict Minerals</h3>
+                    <h3>Sustainable Agriculture & Food (दिगो कृषि र खाद्य)</h3>
                     <p>Tracing raw materials used in tech and supporting companies committed to ethical and conflict-free sourcing.</p>
-                    <button class="subtopic-btn">To Sub-topics</button>
+                    <a href="subtopics.html" class="subtopic-btn">
+                        To Sub-Topics (उप-विषयहरूमा जानुहोस्)
+                    </a>
                 </div>
             </article>
 
             <article class="article-card">
                 <div class="img-placeholder">Materials Image 2</div>
                 <div class="card-content">
-                    <h3>The Right to Repair</h3>
+                    <h3>Renewable Energy (नवीकरणीय ऊर्जा)</h3>
                     <p>Advocating for legislative changes and supporting manufacturers that offer easily replaceable parts.</p>
-                    <button class="subtopic-btn">To Sub-topics</button>
+                    <a href="subtopics.html" class="subtopic-btn">
+                        To Sub-Topics (उप-विषयहरूमा जानुहोस्)
+                    </a>
                 </div>
             </article>
 
             <article class="article-card">
                 <div class="img-placeholder">Materials Image 3</div>
                 <div class="card-content">
-                    <h3>Bioplastics in Tech</h3>
+                    <h3>Environmental Law & Policy (वातावरणीय कानून र नीति)</h3>
                     <p>The rise of plant-based and recycled plastics in phone cases, components, and packaging.</p>
-                    <button class="subtopic-btn">To Sub-topics</button>
+                    <a href="subtopics.html" class="subtopic-btn">
+                        To Sub-Topics (उप-विषयहरूमा जानुहोस्)
+                    </a>
                 </div>
             </article>
         </div>
 
-        <h2 class="group-header">Digital Tools for Climate Action</h2>
+        
         <div class="article-grid">
             
             <article class="article-card">
                 <div class="img-placeholder">Tools Image 1</div>
                 <div class="card-content">
-                    <h3>Tracking Your Carbon Footprint</h3>
+                    <h3>Environmental Health (वातावरणीय स्वास्थ्य)</h3>
                     <p>Using apps and online tools to measure and offset your personal environmental impact.</p>
-                    <button class="subtopic-btn">To Sub-topics</button>
+                    <a href="subtopics.html" class="subtopic-btn">
+                        To Sub-Topics (उप-विषयहरूमा जानुहोस्)
+                    </a>
                 </div>
             </article>
 
             <article class="article-card">
                 <div class="img-placeholder">Tools Image 2</div>
                 <div class="card-content">
-                    <h3>Citizen Science & Monitoring</h3>
+                    <h3>Green Economy & Sustainability (हरित अर्थतन्त्र र दिगोपन)</h3>
                     <p>How simple tech (like mobile apps) enables everyday users to contribute to environmental research.</p>
-                    <button class="subtopic-btn">To Sub-topics</button>
+                    <a href="subtopics.html" class="subtopic-btn">
+                        To Sub-Topics (उप-विषयहरूमा जानुहोस्)
+                    </a>
                 </div>
             </article>
 
             <article class="article-card">
                 <div class="img-placeholder">Tools Image 3</div>
                 <div class="card-content">
-                    <h3>Sustainable Supply Chains</h3>
+                    <h3>Environmental Education & Ethics (वातावरणीय शिक्षा र नैतिकता)</h3>
                     <p>Blockchain and AI applications used by companies to verify ethical sourcing and reduce waste in logistics.</p>
-                    <button class="subtopic-btn">To Sub-topics</button>
+                    <a href="subtopics.html" class="subtopic-btn">
+                        To Sub-Topics (उप-विषयहरूमा जानुहोस्)
+                    </a>
                 </div>
             </article>
         </div>

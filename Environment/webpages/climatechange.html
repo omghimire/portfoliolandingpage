@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
+    <title>Omprakashghimire.com.np | Climate Change</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     
     <style>
@@ -48,73 +48,61 @@
         }
 
         .page-header h1 { font-size: 2.5rem; margin-bottom: 10px; }
-        .page-header p { opacity: 0.9; max-width: 600px; margin: 0 auto; }
+        .page-header p { opacity: 0.9; max-width: 800px; margin: 0 auto; }
 
-        /* --- ABOUT ME FLEX LAYOUT --- */
-        .about-container {
-            max-width: 1000px;
+        /* --- SUB-TOPICS LIST STYLING --- */
+        .subtopic-container {
+            max-width: 800px;
             margin: 0 auto 100px auto;
             padding: 0 20px;
-            display: flex;
-            align-items: center; /* Vertically center items */
-            gap: 40px;
         }
 
-        /* Image Side */
-        .profile-area {
-            flex: 0 0 300px; /* Fixed width for image area on desktop */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .profile-image {
-            width: 500px;
-            height: 500px;
-            object-fit: cover;
-            object-position: top;
-            background-color: var(--primary-color);
-            border-radius: 50%; /* Makes the box round */
-            border: 8px solid var(--accent-color);
-            display: flex;
-            align-items: stretch;
-            justify-content: center;
-            color: var(--text-light);
-            font-size: 1.2rem;
-            font-weight: 600;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-            overflow: hidden; /* Ensures any image placed fits the circle */
-        }
-        
-        /* Text Side */
-        .bio-text {
-            flex-grow: 1;
-            background-color: var(--bg-white);
-            padding: 40px;
+        .subtopic-list {
+            background: var(--bg-white);
             border-radius: 15px;
             box-shadow: var(--shadow);
+            padding: 30px 40px;
+            list-style: none;
         }
 
-        .bio-text h2 {
-            font-size: 2rem;
-            color: var(--primary-dark);
-            margin-bottom: 15px;
+        .subtopic-list li {
+            padding: 15px 0;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            align-items: center;
+            transition: background-color 0.3s ease;
         }
 
-        .bio-text h3 {
+        .subtopic-list li:hover {
+            background-color: #fafafa;
+            padding-left: 10px;
+        }
+
+        .subtopic-list li:last-child {
+            border-bottom: none;
+        }
+
+        .subtopic-list li a {
+            font-size: 1.15rem;
+            font-weight: 500;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+
+        /* List Icon Styling */
+        .subtopic-list li a::before {
+            content: '🔗'; /* Link emoji for visual interest */
             font-size: 1.2rem;
-            color: var(--accent-hover);
-            margin-bottom: 20px;
-            font-weight: 400;
+            color: var(--primary-color);
+            margin-right: 15px;
         }
 
-        .bio-text ul {
-            list-style-type: disc;
-            margin-left: 20px;
-            margin-top: 20px;
-            color: #636e72;
+        .subtopic-list li a:hover {
+            color: var(--primary-color);
         }
-
+        
         /* --- FOOTER --- */
         footer { background-color: var(--text-dark); color: var(--text-light); text-align: center; padding: 40px 20px; margin-top: auto; }
         .social-links { margin-top: 20px; display: flex; justify-content: center; gap: 20px; }
@@ -131,17 +119,8 @@
             .hamburger.toggle .bar:nth-child(2) { opacity: 0; }
             .hamburger.toggle .bar:nth-child(3) { transform: rotate(45deg) translate(-5px, -6px); }
             
-            /* Mobile Stacking */
-            .about-container {
-                flex-direction: column; /* Stack image and text vertically */
-                align-items: stretch; /* Allow text box to stretch full width */
-                gap: 30px;
-            }
-
-            .profile-area {
-                flex: 1 1 auto; /* Allow image area to shrink */
-                padding-top: 20px;
-            }
+            .page-header h1 { font-size: 2rem; }
+            .subtopic-list { padding: 20px; }
         }
     </style>
 </head>
@@ -151,10 +130,11 @@
         <nav>
             <div class="logo">Omprakashghimire<span>.com.np</span></div>
             <ul class="nav-links">
-                <li><a href="index.html">Home गृहपृष्ठ</a></li>
-                <li><a href="tech.html">Tech Tips प्रविधि</a></li>
-                <li><a href="environment.html">Environment वातावरण</a></li>
-                <li><a href="about.html">About Me मेरो बारेमा</a></li> </ul>
+                <li><a href="../../index.html">Home गृहपृष्ठ</a></li>
+                <li><a href="../../tech.html">Tech Tips प्रविधि</a></li>
+                <li><a href="../../environment.html">Environment वातावरण</a></li> 
+                <li><a href="../../about.html">About Me मेरो बारेमा</a></li>
+            </ul>
             <div class="hamburger">
                 <div class="bar"></div>
                 <div class="bar"></div>
@@ -164,40 +144,42 @@
     </header>
 
     <section class="page-header">
-        <h1>Meet the Creator</h1>
-        
+        <h1>Climate Change (जलवायु परिवर्तन)</h1>
+        <p>Climate change is the long-term shift in global weather patterns, primarily driven by human activities that release
+        greenhouse gases. It leads to severe environmental consequences like rising sea levels, extreme weather events, and
+        disrupted ecosystems.</p>
+        <p>(जलवायु परिवर्तन मुख्यतया मानव गतिविधिद्वारा उत्सर्जित हरितगृह ग्यासका कारण हुने विश्वव्यापी मौसमी ढाँचामा आउने
+        दीर्घकालीन परिवर्तन हो। यसले समुद्री सतह बढ्ने, अति चरम मौसमी घटनाहरू हुने र पारिस्थितिक प्रणाली बिग्रने जस्ता गम्भीर
+        वातावरणीय परिणामहरू निम्त्याउँछ।)</p>
     </section>
 
-    <main class="about-container">
-        
-        <div class="profile-area">
-            <div class="profile-image">
-                <img src="photos/OM.png">
-            </div>
-        </div>
-
-        <div class="bio-text">
-            <h2>Who I Am</h2>
-            <h3>Tech Enthusiast| Environment Science Student | Lifelong Learner</h3>
-            <p>I started this Website so that i can contribute and help other people in learning about various Tech and Environment related topics.</p>
-
-            <p>Hi i am Om prakash Ghimire, Once a student of Environment Science and has a good interest and knowledge in Computer Science.</p>
-
-            <h3>My qualifications and skills:</h3>
-            <ul>
-                <li>B.Sc. in Environment Science from Tribhuwan University.</li>
-                <li>One year B.Ed. in Health from Tribhuwan University.</li>
-                <li>M.A. in Sociology from Tribhuwan University.</li>
-                <li>Done few computer courses on computer basics and has a good knowledge of computer fundamentals, microsoft office and canva.</li>
-                <li>Quick Learner.</li>
-                <li>Gets the job done.</li>
-            </ul>
-        </div>
-
+    <main class="subtopic-container">
+        <ul class="subtopic-list">
+            <li><a href="../../Environment/webpages/Climatechange/greenhousegases.html">1.Green house gases(GHGs) हरितगृह ग्याँसहरू </a></li>
+            <li><a href="#">2. Advanced Cyber Security Practices</a></li>
+            <li><a href="#">3. Maximizing PC Performance & Speed</a></li>
+            <li><a href="#">4. Sustainable Supply Chain Verification (Blockchain)</a></li>
+            <li><a href="#">5. The Ethics of AI Development</a></li>
+            <li><a href="#">6. Reducing Data Center Carbon Footprint</a></li>
+            <li><a href="#">7. Right-to-Repair Legislation Explained</a></li>
+            <li><a href="#">8. Choosing Conflict-Free Technology Components</a></li>
+            <li><a href="#">9. Mastering Productivity Software (e.g., VS Code)</a></li>
+            <li><a href="#">10. Eliminating Home "Phantom" Energy Draw</a></li>
+            <li><a href="#">11. Bio-plastics and Recycled Materials in Gadgets</a></li>
+            <li><a href="#">12. Citizen Science Initiatives using Mobile Apps</a></li>
+            <li><a href="#">13. Affordable Solar Power for Home Electronics</a></li>
+            <li><a href="#">14. Open Source Hardware and Sustainability</a></li>
+            <li><a href="#">15. Secure Data Wiping Techniques</a></li>
+        </ul>
     </main>
 
     <footer>
-        <p>&copy; 2025 Omprakashghimire.com.np All Rights Reserved.</p>
+        <p>&copy; 2024 Digital Horizons. All Rights Reserved.</p>
+        <div class="social-links">
+            <a href="#" class="social-icon">FB</a>
+            <a href="#" class="social-icon">TW</a>
+            <a href="#" class="social-icon">IG</a>
+        </div>
     </footer>
 
     <script>
