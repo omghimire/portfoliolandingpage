@@ -203,7 +203,7 @@ footer {
     .nav-links.active { right: 0; }
     .nav-links li { margin: 25px 0; }
     .grid-layout { grid-template-columns: 1fr; }
-    .about-flex { flex-direction: column; text-align: center; }
+    .about-flex { flex-direction: column; text-align: left; }
 }
 /* --- Subtopics Page Specific Styles --- */
 
