@@ -160,7 +160,7 @@ body {
 }
 
 .about-right { flex: 2; }
-.skills-list { margin-top: 15px; padding-left: 20px; }
+.skills-list { margin-top: 15px; padding-left: 20px; align-items: left; }
 
 /* --- Footer --- */
 footer {
