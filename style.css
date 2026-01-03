@@ -159,8 +159,9 @@ body {
     border-radius: 50%;
 }
 
-.about-right { flex: 2; }
-.skills-list { margin-top: 15px; padding-left: 20px; align-items: left; }
+.about-right { flex: 2; content: left;} 
+.about-right { text-align: left; }
+.skills-list { margin-top: 15px; padding-left: 20px; }
 
 /* --- Footer --- */
 footer {
