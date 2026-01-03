@@ -1,0 +1,363 @@
+/* --- Global Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #E5EDF1;
+    color: #2C3E50;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.justified {
+    text-align: justify;
+}
+
+/* --- Header & Navigation --- */
+.header {
+    background-color: #FFFFFF;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #96C2DB;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #2C3E50;
+    margin-left: 30px;
+    font-weight: 400;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover, .nav-links li a.active {
+    color: #96C2DB;
+}
+
+/* --- Buttons --- */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+    font-weight: 600;
+}
+
+.btn-primary {
+    background-color: #96C2DB;
+    color: white;
+}
+
+.btn-card {
+    background-color: #96C2DB;
+    color: white;
+    font-size: 0.85rem;
+    padding: 8px 15px;
+    margin-top: 15px;
+}
+
+.btn:hover {
+    filter: brightness(0.9);
+}
+
+/* --- Hero Section --- */
+.hero {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero h1 { font-size: 3rem; margin-bottom: 10px; color: #2C3E50; }
+
+/* --- Home Environment Intro --- */
+.env-intro-section {
+    background: #FFFFFF;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.env-intro-section h2 { margin-bottom: 20px; }
+.env-intro-section p { margin-bottom: 20px; max-width: 800px; margin-left: auto; margin-right: auto; }
+
+/* --- Environment Grid --- */
+.section-header { text-align: center; margin-bottom: 40px; }
+
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.card {
+    background: #FFFFFF;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.img-placeholder {
+    height: 180px;
+    background-color: #D1E1E9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2C3E50;
+}
+
+.card-body { padding: 20px; }
+.card-body h3 { margin-bottom: 10px; font-size: 1.1rem; }
+
+/* --- About Me Flex --- */
+.about-flex {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    background: #FFFFFF;
+    padding: 50px;
+    border-radius: 15px;
+}
+
+.about-left { flex: 1; display: flex; justify-content: center; }
+.profile-circle {
+    width: 250px;
+    height: 250px;
+    background: #D1E1E9;
+    border-radius: 50%;
+}
+
+.about-right { flex: 2; }
+.skills-list { margin-top: 15px; padding-left: 20px; }
+
+/* --- Footer --- */
+footer {
+    background-color: #FFFFFF;
+    text-align: center;
+    padding: 30px;
+    margin-top: 40px;
+}
+
+/* --- Responsive Menu --- */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background-color: #2C3E50;
+    margin: 3px 0;
+}
+
+@media (max-width: 768px) {
+    .hamburger { display: flex; }
+    
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: -100%;
+        height: 100vh;
+        width: 70%;
+        background-color: #FFFFFF;
+        flex-direction: column;
+        align-items: center;
+        transition: 0.5s;
+        box-shadow: -5px 0 10px rgba(0,0,0,0.05);
+    }
+
+    .nav-links.active { right: 0; }
+    .nav-links li { margin: 25px 0; }
+    .grid-layout { grid-template-columns: 1fr; }
+    .about-flex { flex-direction: column; text-align: center; }
+}
+/* --- Subtopics Page Specific Styles --- */
+
+.topics-list-container {
+    max-width: 800px; /* Centered narrow container for better readability */
+    margin: 0 auto;
+}
+
+.topics-card {
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    padding: 20px 0; /* Padding only on top/bottom to allow full-width dividers */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.vertical-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.topic-line-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 30px;
+    text-decoration: none;
+    color: #2C3E50;
+    border-bottom: 1px solid #f0f4f7;
+    transition: all 0.3s ease;
+}
+
+/* Remove border from the last item */
+.topic-line-link:last-child {
+    border-bottom: none;
+}
+
+.topic-title {
+    font-size: 1.05rem;
+    font-weight: 400;
+}
+
+.topic-icon {
+    color: #96C2DB;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.3s ease;
+}
+
+/* Hover Effects */
+.topic-line-link:hover {
+    background-color: #f8fbfc;
+    padding-left: 40px; /* Slight slide in effect */
+}
+
+.topic-line-link:hover .topic-title {
+    color: #96C2DB;
+}
+
+.topic-line-link:hover .topic-icon {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Tablet & Mobile Adjustments */
+@media (max-width: 768px) {
+    .topic-line-link {
+        padding: 15px 20px;
+    }
+    
+    .topic-title {
+        font-size: 0.95rem;
+    }
+}
+/* --- Vlog Page Specific Styles --- */
+.vlog-post {
+    background: #FFFFFF;
+    padding: 60px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.vlog-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.vlog-header h1 {
+    font-size: 2.5rem;
+    color: #2C3E50;
+    margin-bottom: 10px;
+}
+
+.post-date {
+    color: #96C2DB;
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+.vlog-content p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+/* YouTube Link Section */
+.vlog-links {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 2px solid #E5EDF1;
+}
+
+.vlog-links h3 {
+    margin-bottom: 20px;
+    color: #2C3E50;
+}
+
+.link-group {
+    display: flex;
+    gap: 20px;
+}
+
+.vlog-btn {
+    flex: 1;
+    display: inline-block;
+    padding: 15px 20px;
+    background-color: #96C2DB;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.vlog-btn:hover {
+    background-color: #2C3E50;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .vlog-post {
+        padding: 30px 20px;
+    }
+    
+    .vlog-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .link-group {
+        flex-direction: column;
+    }
+}
