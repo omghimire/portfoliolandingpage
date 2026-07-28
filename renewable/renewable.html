@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renewable & Sustainable Energy | Topics</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">Om p. Ghimire</div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../environment.html">Environment</a></li>
+                <li><a href="../about.html">About Me</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="section-header">
+            <h1>Renewable & Sustainable Energy</h1>
+            <p>Possible subtopics related to clean, affordable, and resilient energy systems.</p>
+        </section>
+
+        <section class="topics-list-container">
+            <div class="topics-card">
+                <nav class="vertical-links" id="topics-placeholder"></nav>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Omprakashghimire.com.np. All rights reserved.</p>
+    </footer>
+
+    <script src="../script.js"></script>
+
+    <script>
+        const subtopicsData = [
+            { name: "1. Solar PV and rooftop solar adoption", url: "solar-pv.html" },
+            { name: "2. Wind energy: onshore and offshore", url: "wind-energy.html" },
+            { name: "3. Hydropower and run-of-river systems", url: "hydropower.html" },
+            { name: "4. Geothermal energy for heating and power", url: "geothermal.html" },
+            { name: "5. Green hydrogen and energy storage", url: "green-hydrogen.html" },
+            { name: "6. Smart grids and demand response", url: "smart-grids.html" },
+            { name: "7. Energy-efficient buildings and retrofits", url: "energy-efficient-buildings.html" },
+            { name: "8. Bioenergy and waste-to-energy systems", url: "bioenergy.html" },
+            { name: "9. Community microgrids and rural electrification", url: "microgrids.html" },
+            { name: "10. Renewable policy, finance, and incentives", url: "policy-finance.html" }
+        ];
+
+        const container = document.getElementById('topics-placeholder');
+
+        subtopicsData.forEach(topic => {
+            const link = document.createElement('a');
+            link.href = topic.url;
+            link.className = 'topic-line-link';
+            link.innerHTML = `
+                <span class="topic-title">${topic.name}</span>
+                <span class="topic-icon">→</span>
+            `;
+            container.appendChild(link);
+        });
+    </script>
+</body>
+</html>

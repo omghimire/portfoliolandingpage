@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technology | Topics</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">Om p. Ghimire</div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="environment.html">Environment</a></li>
+                
+                <li><a href="about.html">About Me</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <header class="section-header">
+            <h1>Technology Topics</h1>
+            <p>प्रविधि सम्बन्धी विषयहरू</p>
+        </header>
+
+        <section class="grid-layout" id="editable-card-container"></section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Omprakashghimire.com.np. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    
+    <script>
+        /**
+         * EDITABLE SECTION: 
+         * Change the text within this array to update your 12 cards.
+         */
+        const cardData = [
+            { title: "1. Artificial Intelligence & Machine Learning ", summary: "कृत्रिम बुद्धि र मेसिन लर्निङ", link: "#" },
+            { title: "2. Web Development & Programming", summary: "वेब विकास र प्रोग्रामिङ", link: "#" },
+            { title: "3. Cybersecurity & Data Privacy", summary: "साइबर सुरक्षा र डाटा गोपनीयता", link: "#" },
+            { title: "4. Cloud Computing & Infrastructure", summary: "क्लाउड कम्प्युटिङ र पूर्वाधार", link: "#" },
+            { title: "5. Mobile App Development", summary: "मोबाइल एप विकास", link: "#" },
+            { title: "6. Data Science & Analytics", summary: "डाटा विज्ञान र विश्लेषण", link: "#" },
+            { title: "7. Internet of Things (IoT)", summary: "इन्टरनेट अफ थिङ्स (IoT)", link: "#" },
+            { title: "8. Blockchain & Cryptocurrency", summary: "ब्लकचेन र क्रिप्टोकरेन्सी", link: "#" },
+            { title: "9. Software Engineering & DevOps", summary: "सफ्टवेयर इन्जिनियरिङ र DevOps", link: "#" },
+            { title: "10. Computer Networks & Systems", summary: "कम्प्युटर नेटवर्क र प्रणाली", link: "#" },
+            { title: "11. Digital Literacy & Office Tools", summary: "डिजिटल साक्षरता र अफिस उपकरण", link: "#" },
+            { title: "12. Emerging Tech & Innovation", summary: "उदीयमान प्रविधि र नवाचार", link: "#" }
+        ];
+
+        const container = document.getElementById('editable-card-container');
+        
+        cardData.forEach((item, index) => {
+            const cardHTML = `
+                <article class="card">
+                    <div class="img-placeholder">Topic ${index + 1}</div>
+                    <div class="card-body">
+                        <h3>${item.title}</h3>
+                        <p class="justified">${item.summary}</p>
+                        <a href="${item.link}" class="btn btn-card">To the topic</a>
+                    </div>
+                </article>
+            `;
+            container.innerHTML += cardHTML;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climate Change & Global Warming | Subtopics</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">Om p. Ghimire</div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../environment.html" class="active">Environment</a></li>
+                
+                <li><a href="../about.html">About Me</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="section-header">
+            <h1>Climate Change & Global Warming</h1>
+            <p>जलवायु परिवर्तन र भूमण्डलीय तापक्रम वृद्धि</p>
+            <p>A comprehensive list of subtopics under Climate Change and Global Warming.</p>
+        </section>
+
+        <section class="topics-list-container">
+            <div class="topics-card">
+                <nav class="vertical-links" id="topics-placeholder"></nav>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Omprakashghimire.com.np All rights reserved.</p>
+    </footer>
+
+    <script src="../script.js"></script>
+
+    <script>
+        /**
+         * EDITABLE SECTION:
+         * Change 'name' for the display text and 'url' for the hyperlink.
+         */
+        const subtopicsData = [
+            { name: "1. Greenhouse Gas Emissions & Sources", url: "climate-vlog-1.html" },
+            { name: "2. Carbon Dioxide (CO₂) Concentration Trends", url: "climate-vlog-2.html" },
+            { name: "3. Methane (CH₄) and Its Climate Impact", url: "climate-vlog-3.html" },
+            { name: "4. The Greenhouse Effect Explained", url: "climate-vlog-4.html" },
+            { name: "5. Global Temperature Rise & Historical Records", url: "climate-vlog-5.html" },
+            { name: "6. IPCC Reports & Climate Science", url: "climate-vlog-6.html" },
+            { name: "7. Paris Agreement & International Climate Policy", url: "climate-vlog-7.html" },
+            { name: "8. Carbon Footprint & Personal Impact", url: "climate-vlog-8.html" },
+            { name: "9. Fossil Fuels & the Energy Transition", url: "climate-vlog-9.html" },
+            { name: "10. Deforestation & Land Use Change", url: "climate-vlog-10.html" },
+            { name: "11. Melting Glaciers & Polar Ice Caps", url: "climate-vlog-11.html" },
+            { name: "12. Sea Level Rise & Coastal Impacts", url: "climate-vlog-12.html" },
+            { name: "13. Extreme Weather Events (Heatwaves, Storms, Floods)", url: "climate-vlog-13.html" },
+            { name: "14. Climate Feedback Loops (Albedo, Permafrost)", url: "climate-vlog-14.html" },
+            { name: "15. Ocean Warming & Acidification", url: "climate-vlog-15.html" },
+            { name: "16. Climate Refugees & Environmental Migration", url: "climate-vlog-16.html" },
+            { name: "17. Climate Mitigation Strategies", url: "climate-vlog-17.html" },
+            { name: "18. Climate Adaptation & Resilience Planning", url: "climate-vlog-18.html" },
+            { name: "19. Carbon Capture, Utilization & Storage (CCUS)", url: "climate-vlog-19.html" },
+            { name: "20. Renewable Energy & Decarbonization", url: "climate-vlog-20.html" },
+            { name: "21. Climate Justice & Equity", url: "climate-vlog-21.html" },
+            { name: "22. Climate Modeling & Future Predictions", url: "climate-vlog-22.html" },
+            { name: "23. Agriculture & Food Security Under Climate Change", url: "climate-vlog-23.html" },
+            { name: "24. Biodiversity Loss Linked to Climate Change", url: "climate-vlog-24.html" },
+            { name: "25. Net Zero Targets & Corporate Commitments", url: "climate-vlog-25.html" }
+        ];
+
+        const container = document.getElementById('topics-placeholder');
+
+        subtopicsData.forEach(topic => {
+            const link = document.createElement('a');
+            link.href = topic.url;
+            link.className = 'topic-line-link';
+            link.innerHTML = `
+                <span class="topic-title">${topic.name}</span>
+                <span class="topic-icon">→</span>
+            `;
+            container.appendChild(link);
+        });
+    </script>
+</body>
+</html>
