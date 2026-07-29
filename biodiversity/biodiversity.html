@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodiversity & Conservation | EcoVision</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">EcoVision</div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../environment.html">Environment</a></li>
+                <li><a href="../about.html">About Me</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="section-header">
+            <h1>Biodiversity & Conservation</h1>
+            <p>Possible subtopics to explore for biodiversity and conservation studies and awareness.</p>
+        </section>
+
+        <section class="topics-list-container">
+            <div class="topics-card">
+                <nav class="vertical-links" id="topics-placeholder"></nav>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 EcoVision. All rights reserved.</p>
+    </footer>
+
+    <script src="../script.js"></script>
+
+    <script>
+        const subtopicsData = [
+            { name: "1. Habitat Loss and Fragmentation", url: "habitat-loss-and-fragmentation.html" },
+            { name: "2. Endangered Species Protection", url: "endangered-species-protection.html" },
+            { name: "3. Protected Areas and Wildlife Corridors", url: "protected-areas-and-wildlife-corridors.html" },
+            { name: "4. Protected Areas of Nepal", url: "protected-areas-of-nepal.html" },
+            { name: "5. Invasive Species Management", url: "invasive-species-management.html" },
+            { name: "6. Community-Based Conservation", url: "community-based-conservation.html" },
+            { name: "7. Ecosystem Restoration and Rewilding", url: "ecosystem-restoration-and-rewilding.html" },
+            { name: "8. Indigenous Knowledge in Conservation", url: "indigenous-knowledge-in-conservation.html" },
+            { name: "9. Climate Change Impacts on Biodiversity", url: "climate-change-impacts-on-biodiversity.html" },
+            { name: "10. Genetic Diversity and Seed Banks", url: "genetic-diversity-and-seed-banks.html" },
+            { name: "11. Marine Biodiversity Protection", url: "marine-biodiversity-protection.html" },
+            { name: "12. Agro-Biodiversity and Sustainable Farming", url: "agro-biodiversity-and-sustainable-farming.html" },
+            { name: "13. Wildlife Trade and Poaching Prevention", url: "wildlife-trade-and-poaching-prevention.html" }
+        ];
+
+        const container = document.getElementById('topics-placeholder');
+
+        subtopicsData.forEach(topic => {
+            const link = document.createElement('a');
+            link.href = topic.url;
+            link.className = 'topic-line-link';
+            link.innerHTML = `
+                <span class="topic-title">${topic.name}</span>
+                <span class="topic-icon">→</span>
+            `;
+            container.appendChild(link);
+        });
+    </script>
+</body>
+</html>
