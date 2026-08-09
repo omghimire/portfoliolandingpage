@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Security & Hydrology | EcoVision</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">Om p. Ghimire</div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../environment.html">Environment</a></li>
+                <li><a href="../about.html">About Me</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="section-header">
+            <h1>Water Security & Hydrology</h1>
+            <p>Possible subtopics to explore for water security, hydrology, and sustainable water resource management.</p>
+        </section>
+
+        <section class="topics-list-container">
+            <div class="topics-card">
+                <nav class="vertical-links" id="topics-placeholder"></nav>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Omprakashghimire.com.np. All rights reserved.</p>
+    </footer>
+
+    <script src="../script.js"></script>
+
+    <script>
+        const subtopicsData = [
+            { name: "1. Watershed Management and River Basin Planning", url: "watershed-management-and-river-basin-planning.html" },
+            { name: "2. Groundwater Resources and Aquifer Recharge", url: "groundwater-resources-and-aquifer-recharge.html" },
+            { name: "3. Glacial Lake Outburst Floods (GLOFs) and High-Altitude Hydrology", url: "glacial-lake-outburst-floods-and-high-altitude-hydrology.html" },
+            { name: "4. Transboundary Water Governance", url: "transboundary-water-governance.html" },
+            { name: "5. Flood Risk Management and Early Warning Systems", url: "flood-risk-management-and-early-warning-systems.html" },
+            { name: "6. Drought, Water Scarcity, and Climate Resilience", url: "drought-water-scarcity-and-climate-resilience.html" },
+            { name: "7. Hydropower Development and Environmental Flows", url: "hydropower-development-and-environmental-flows.html" },
+            { name: "8. Water Quality Monitoring and Pollution Control", url: "water-quality-monitoring-and-pollution-control.html" },
+            { name: "9. Rainwater Harvesting and Community Water Storage", url: "rainwater-harvesting-and-community-water-storage.html" },
+            { name: "10. Spring Revival and Mountain Water Sources", url: "spring-revival-and-mountain-water-sources.html" },
+            { name: "11. Climate Change Impacts on Water Resources", url: "climate-change-impacts-on-water-resources.html" },
+            { name: "12. Irrigation and Agricultural Water Management", url: "irrigation-and-agricultural-water-management.html" },
+            { name: "13. Urban Water Supply, Sanitation, and WASH", url: "urban-water-supply-sanitation-and-wash.html" },
+            { name: "14. Integrated Water Resources Management (IWRM)", url: "integrated-water-resources-management.html" },
+            { name: "15. Wetland Hydrology and Floodplain Ecosystems", url: "wetland-hydrology-and-floodplain-ecosystems.html" }
+        ];
+
+        const container = document.getElementById('topics-placeholder');
+
+        subtopicsData.forEach(topic => {
+            const link = document.createElement('a');
+            link.href = topic.url;
+            link.className = 'topic-line-link';
+            link.innerHTML = `
+                <span class="topic-title">${topic.name}</span>
+                <span class="topic-icon">→</span>
+            `;
+            container.appendChild(link);
+        });
+    </script>
+</body>
+</html>
