@@ -44,27 +44,30 @@
          * Change the text within this array to update your 12 cards.
          */
         const cardData = [
-            { title: "1. Climate Change & Global Warming ", summary: "जलवायु परिवर्तन र भूमण्डलीय तापक्रम वृद्धि", link: "climate/climatechange.html" },
-            { title: "2. Renewable & Sustainable Energy", summary: "नवीकरणीय र दिगो ऊर्जा", link: "renewable/renewable.html" },
-            { title: "3. Biodiversity & Conservation", summary: "जैविक विविधता र संरक्षण", link: "biodiversity/biodiversity.html" },
-            { title: "4. Water Security & Hydrology", summary: "जल सुरक्षा र जलविद्युत", link: "hydrology/hydrology.html" },
-            { title: "5. Waste Management & Circular Economy", summary: "फोहोरमैला व्यवस्थापन र चक्रिय अर्थतन्त्र", link: "waste/waste-management-and-circular-economy.html" },
-            { title: "6. Sustainable Agriculture & Food Systems", summary: "दिगो कृषि र खाद्य प्रणाली", link: "topic6.html" },
-            { title: "7. Air Quality & Atmospheric Science", summary: "वायुको गुणस्तर र वायुमण्डलीय विज्ञान", link: "topic7.html" },
-            { title: "8. Forest & Terrestrial Ecosystems", summary: "वन र स्थलीय पारिस्थितिक प्रणाली", link: "topic8.html" },
-            { title: "9. Environmental Policy & Economics", summary: "वातावरणीय नीति र अर्थशास्त्र", link: "topic9.html" },
-            { title: "10. Oceanography & Marine Life", summary: "समुद्र विज्ञान र समुद्री जीव", link: "topic10.html" },
-            { title: "11. Sustainable Urban Development", summary: "दिगो सहरी विकास", link: "topic11.html" },
-            { title: "12. Environmental Health & Toxicology ", summary: "वातावरणीय स्वास्थ्य र विषविज्ञान", link: "topic12.html" }
+            { title: "1. Climate Change & Global Warming ", summary: "जलवायु परिवर्तन र भूमण्डलीय तापक्रम वृद्धि", link: "climate/climatechange.html", image: "climate/images/climate-change-banner.jpg" },
+            { title: "2. Renewable & Sustainable Energy", summary: "नवीकरणीय र दिगो ऊर्जा", link: "renewable/renewable.html", image: "renewable/images/renewable-energy-banner.jpg" },
+            { title: "3. Biodiversity & Conservation", summary: "जैविक विविधता र संरक्षण", link: "biodiversity/biodiversity.html", image: "biodiversity/images/biodiversity-conservation-banner.jpg" },
+            { title: "4. Water Security & Hydrology", summary: "जल सुरक्षा र जलविद्युत", link: "hydrology/hydrology.html", image: "hydrology/images/hydrology-water-banner.jpg" },
+            { title: "5. Waste Management & Circular Economy", summary: "फोहोरमैला व्यवस्थापन र चक्रिय अर्थतन्त्र", link: "waste/waste-management-and-circular-economy.html", image: "waste/images/waste-circular-economy-banner.jpg" },
+            { title: "6. Sustainable Agriculture & Food Systems", summary: "दिगो कृषि र खाद्य प्रणाली", link: "agriculture/sustainable-agriculture-and-food-systems.html", image: "agriculture/images/sustainable-agriculture-banner.jpg" },
+            { title: "7. Air Quality & Atmospheric Science", summary: "वायुको गुणस्तर र वायुमण्डलीय विज्ञान", link: "air/air-quality-and-atmospheric-science.html", image: "air/images/air-quality-atmosphere-banner.jpg" },
+            { title: "8. Forest & Terrestrial Ecosystems", summary: "वन र स्थलीय पारिस्थितिक प्रणाली", link: "topic8.html", image: "images/forest-terrestrial-ecosystems.jpg" },
+            { title: "9. Environmental Policy & Economics", summary: "वातावरणीय नीति र अर्थशास्त्र", link: "topic9.html", image: "images/environmental-policy-economics.jpg" },
+            { title: "10. Oceanography & Marine Life", summary: "समुद्र विज्ञान र समुद्री जीव", link: "topic10.html", image: "images/oceanography-marine-life.jpg" },
+            { title: "11. Sustainable Urban Development", summary: "दिगो सहरी विकास", link: "topic11.html", image: "images/sustainable-urban-development.jpg" },
+            { title: "12. Environmental Health & Toxicology ", summary: "वातावरणीय स्वास्थ्य र विषविज्ञान", link: "topic12.html", image: "images/environmental-health-toxicology.jpg" }
         ];
 
         // LOGIC TO RENDER CARDS
         const container = document.getElementById('editable-card-container');
         
         cardData.forEach((item, index) => {
+            const media = item.image
+                ? `<img class="card-image" src="${item.image}" alt="${item.title.trim()}">`
+                : `<div class="img-placeholder">Topic ${index + 1}</div>`;
             const cardHTML = `
                 <article class="card">
-                    <div class="img-placeholder">Topic ${index + 1}</div>
+                    ${media}
                     <div class="card-body">
                         <h3>${item.title}</h3>
                         <p class="justified">${item.summary}</p>

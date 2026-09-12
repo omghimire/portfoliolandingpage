@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainable Agriculture &amp; Food Systems | EcoVision</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">Om p. Ghimire</div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../environment.html">Environment</a></li>
+                <li><a href="../tech.html">Tech</a></li>
+                <li><a href="../about.html">About Me</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="section-header">
+            <h1>Sustainable Agriculture &amp; Food Systems</h1>
+            <p>दिगो कृषि र खाद्य प्रणाली</p>
+            <figure class="topic-banner">
+                <img src="images/sustainable-agriculture-banner.jpg" alt="Terraced rice paddies and mixed crops on a misty Himalayan hillside">
+            </figure>
+            <p>Possible subtopics to explore for sustainable farming, food security, and resilient food systems.</p>
+        </section>
+
+        <section class="topics-list-container">
+            <div class="topics-card">
+                <nav class="vertical-links" id="topics-placeholder"></nav>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Omprakashghimire.com.np. All rights reserved.</p>
+    </footer>
+
+    <script src="../script.js"></script>
+
+    <script>
+        const subtopicsData = [
+            { name: "1. Organic Farming and Natural Inputs", url: "organic-farming-and-natural-inputs.html" },
+            { name: "2. Regenerative Agriculture and Soil Health", url: "regenerative-agriculture-and-soil-health.html" },
+            { name: "3. Agroecology and Farm Biodiversity", url: "agroecology-and-farm-biodiversity.html" },
+            { name: "4. Precision Agriculture and Smart Farming", url: "precision-agriculture-and-smart-farming.html" },
+            { name: "5. Climate-Smart Agriculture", url: "climate-smart-agriculture.html" },
+            { name: "6. Sustainable Irrigation and Agricultural Water Use", url: "sustainable-irrigation-and-agricultural-water-use.html" },
+            { name: "7. Integrated Pest Management (IPM)", url: "integrated-pest-management.html" },
+            { name: "8. Agroforestry and Silvopasture Systems", url: "agroforestry-and-silvopasture-systems.html" },
+            { name: "9. Sustainable Livestock and Pasture Management", url: "sustainable-livestock-and-pasture-management.html" },
+            { name: "10. Aquaculture and Sustainable Fisheries", url: "aquaculture-and-sustainable-fisheries.html" },
+            { name: "11. Food Security and Global Hunger", url: "food-security-and-global-hunger.html" },
+            { name: "12. Local Food Systems and Short Supply Chains", url: "local-food-systems-and-short-supply-chains.html" },
+            { name: "13. Agri-Food Supply Chains and Food Miles", url: "agri-food-supply-chains-and-food-miles.html" },
+            { name: "14. Plant-Based Diets and Alternative Proteins", url: "plant-based-diets-and-alternative-proteins.html" },
+            { name: "15. Seed Sovereignty and Crop Diversity", url: "seed-sovereignty-and-crop-diversity.html" },
+            { name: "16. Urban Agriculture and Community Gardens", url: "urban-agriculture-and-community-gardens.html" },
+            { name: "17. Vertical Farming and Hydroponics", url: "vertical-farming-and-hydroponics.html" },
+            { name: "18. Reducing Agrochemicals and Biofertilizers", url: "reducing-agrochemicals-and-biofertilizers.html" },
+            { name: "19. Sustainable Agriculture in Nepal", url: "sustainable-agriculture-in-nepal.html" },
+            { name: "20. Food Labels, Certification, and Policy", url: "food-labels-certification-and-policy.html" }
+        ];
+
+        const container = document.getElementById('topics-placeholder');
+
+        subtopicsData.forEach(topic => {
+            const link = document.createElement('a');
+            link.href = topic.url;
+            link.className = 'topic-line-link';
+            link.innerHTML = `
+                <span class="topic-title">${topic.name}</span>
+                <span class="topic-icon">→</span>
+            `;
+            container.appendChild(link);
+        });
+    </script>
+</body>
+</html>

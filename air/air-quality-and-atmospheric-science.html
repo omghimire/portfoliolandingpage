@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Quality &amp; Atmospheric Science | EcoVision</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">Om p. Ghimire</div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../environment.html">Environment</a></li>
+                <li><a href="../tech.html">Tech</a></li>
+                <li><a href="../about.html">About Me</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="section-header">
+            <h1>Air Quality &amp; Atmospheric Science</h1>
+            <p>वायुको गुणस्तर र वायुमण्डलीय विज्ञान</p>
+            <figure class="topic-banner">
+                <img src="images/air-quality-atmosphere-banner.jpg" alt="Himalayan valley at dawn with layered atmospheric haze and a city below">
+            </figure>
+            <p>Possible subtopics to explore for atmospheric pollution, monitoring, climate interactions, and clean air solutions.</p>
+        </section>
+
+        <section class="topics-list-container">
+            <div class="topics-card">
+                <nav class="vertical-links" id="topics-placeholder"></nav>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Omprakashghimire.com.np. All rights reserved.</p>
+    </footer>
+
+    <script src="../script.js"></script>
+
+    <script>
+        const subtopicsData = [
+            { name: "1. Urban Air Pollution and Smog", url: "urban-air-pollution-and-smog.html" },
+            { name: "2. Particulate Matter (PM2.5 and PM10)", url: "particulate-matter-pm25-and-pm10.html" },
+            { name: "3. Ground-Level Ozone and Photochemical Smog", url: "ground-level-ozone-and-photochemical-smog.html" },
+            { name: "4. Indoor Air Quality and Ventilation", url: "indoor-air-quality-and-ventilation.html" },
+            { name: "5. Air Quality Monitoring and Sensor Networks", url: "air-quality-monitoring-and-sensor-networks.html" },
+            { name: "6. Transport Emissions and Vehicle Standards", url: "transport-emissions-and-vehicle-standards.html" },
+            { name: "7. Industrial Emissions and Pollution Controls", url: "industrial-emissions-and-pollution-controls.html" },
+            { name: "8. Agricultural Emissions and Open Burning", url: "agricultural-emissions-and-open-burning.html" },
+            { name: "9. Household Air Pollution and Biomass Cooking", url: "household-air-pollution-and-biomass-cooking.html" },
+            { name: "10. Wildfire Smoke and Biomass Burning", url: "wildfire-smoke-and-biomass-burning.html" },
+            { name: "11. Atmospheric Chemistry and Pollutant Formation", url: "atmospheric-chemistry-and-pollutant-formation.html" },
+            { name: "12. Acid Rain and Atmospheric Deposition", url: "acid-rain-and-atmospheric-deposition.html" },
+            { name: "13. Greenhouse Gases and Radiative Forcing", url: "greenhouse-gases-and-radiative-forcing.html" },
+            { name: "14. Aerosols, Clouds, and Climate Interactions", url: "aerosols-clouds-and-climate-interactions.html" },
+            { name: "15. Stratospheric Ozone Layer and UV Protection", url: "stratospheric-ozone-layer-and-uv-protection.html" },
+            { name: "16. Air Quality Index (AQI) and Public Alerts", url: "air-quality-index-and-public-alerts.html" },
+            { name: "17. Health Impacts of Air Pollution", url: "health-impacts-of-air-pollution.html" },
+            { name: "18. Air Pollution Policy and Emission Standards", url: "air-pollution-policy-and-emission-standards.html" },
+            { name: "19. Air Quality in Nepal and the Himalayas", url: "air-quality-in-nepal-and-the-himalayas.html" },
+            { name: "20. Clean Air Technology and Filtration Systems", url: "clean-air-technology-and-filtration-systems.html" }
+        ];
+
+        const container = document.getElementById('topics-placeholder');
+
+        subtopicsData.forEach(topic => {
+            const link = document.createElement('a');
+            link.href = topic.url;
+            link.className = 'topic-line-link';
+            link.innerHTML = `
+                <span class="topic-title">${topic.name}</span>
+                <span class="topic-icon">→</span>
+            `;
+            container.appendChild(link);
+        });
+    </script>
+</body>
+</html>
