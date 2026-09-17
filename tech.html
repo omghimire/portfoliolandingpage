@@ -22,53 +22,8 @@
             </div>
         </nav>
     </header>
-
-    <main class="container">
-        <header class="section-header">
-            <h1>Technology Related Topics</h1>
-            <p>प्रविधि-सम्बन्धी विषयहरू</p>
-        </header>
-
-        <section class="grid-layout" id="editable-card-container"></section>
-    </main>
-
-    <footer>
+   <p>Page under construction. Please visit later.</p> 
+   <footer>
         <p>&copy; 2026 Omprakashghimire.com.np. All rights reserved.</p>
     </footer>
-
-    <script src="script.js"></script>
-
-    <script>
-        const cardData = [
-            { title: "1. Computer Fundamentals", summary: "कम्प्युटरका आधारभूत ज्ञान र सिद्धान्तहरू", link: "tech-topic1.html" },
-            { title: "2. Web Development", summary: "वेब विकास र अनलाइन प्लेटफर्म निर्माण", link: "tech-topic2.html" },
-            { title: "3. Programming & Coding", summary: "प्रोग्रामिङ र कोड लेखन", link: "tech-topic3.html" },
-            { title: "4. Artificial Intelligence", summary: "कृत्रिम बुद्धिमत्ता र मेसिन लर्निङ", link: "tech-topic4.html" },
-            { title: "5. Cybersecurity", summary: "साइबर सुरक्षा र डाटा सुरक्षा", link: "tech-topic5.html" },
-            { title: "6. Data Science", summary: "डाटा विज्ञान र विश्लेषण", link: "tech-topic6.html" },
-            { title: "7. Cloud Computing", summary: "क्लाउड कम्प्युटिङ र अनलाइन सेवाहरू", link: "tech-topic7.html" },
-            { title: "8. Internet of Things (IoT)", summary: "वस्तु इन्टरनेट र स्मार्ट उपकरणहरू", link: "tech-topic8.html" },
-            { title: "9. Digital Literacy", summary: "डिजिटल साक्षरता र अनलाइन सीप", link: "tech-topic9.html" },
-            { title: "10. Software & Productivity Tools", summary: "सफ्टवेयर र उत्पादकता उपकरणहरू", link: "tech-topic10.html" },
-            { title: "11. Mobile Applications", summary: "मोबाइल एप्लिकेशन र मोबाइल प्रविधि", link: "tech-topic11.html" },
-            { title: "12. Emerging Technologies", summary: "उदीयमान प्रविधिहरू र भविष्यका प्रवृत्तिहरू", link: "tech-topic12.html" }
-        ];
-
-        const container = document.getElementById('editable-card-container');
-
-        cardData.forEach((item, index) => {
-            const cardHTML = `
-                <article class="card">
-                    <div class="img-placeholder tech-placeholder">Tech ${index + 1}</div>
-                    <div class="card-body">
-                        <h3>${item.title}</h3>
-                        <p class="justified">${item.summary}</p>
-                        <a href="${item.link}" class="btn btn-card">To the topic</a>
-                    </div>
-                </article>
-            `;
-            container.innerHTML += cardHTML;
-        });
-    </script>
 </body>
-</html>

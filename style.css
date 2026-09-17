@@ -845,6 +845,26 @@ footer p {
     color: var(--color-primary-light);
 }
 
+.vlog-content ul.protected-area-names {
+    margin-left: 8px;
+    max-width: 100%;
+}
+
+.protected-area-names li {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px 24px;
+    padding: 2px 4px 2px 0;
+}
+
+.protected-area-names li span:last-child {
+    text-align: right;
+    color: var(--color-primary-dark);
+    font-weight: 500;
+    flex: 1 1 auto;
+}
+
 .vlog-content a {
     color: var(--color-primary);
     font-weight: 600;
@@ -900,6 +920,15 @@ footer p {
     background-image:
         linear-gradient(180deg, rgba(238, 246, 242, 0.88) 0%, rgba(238, 246, 242, 0.92) 100%),
         url('renewable/images/renewable-energy-banner.jpg');
+    background-size: cover;
+    background-position: center 30%;
+    background-attachment: fixed;
+}
+
+.biodiversity-vlog-page {
+    background-image:
+        linear-gradient(180deg, rgba(238, 246, 242, 0.88) 0%, rgba(238, 246, 242, 0.92) 100%),
+        url('biodiversity/images/biodiversity-conservation-banner.jpg');
     background-size: cover;
     background-position: center 30%;
     background-attachment: fixed;
@@ -1061,8 +1090,20 @@ footer p {
         font-size: 1.6rem;
     }
 
+    .protected-area-names li {
+        flex-wrap: wrap;
+        gap: 2px 16px;
+    }
+
+    .protected-area-names li span:last-child {
+        min-width: 100%;
+        text-align: left;
+        padding-left: 0;
+    }
+
     .climate-vlog-page,
-    .renewable-vlog-page {
+    .renewable-vlog-page,
+    .biodiversity-vlog-page {
         background-attachment: scroll;
     }
 
