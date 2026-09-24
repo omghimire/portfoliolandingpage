@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainable Urban Development | EcoVision</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">Om p. Ghimire</div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../environment.html">Environment</a></li>
+                <li><a href="../tech.html">Tech</a></li>
+                <li><a href="../about.html">About Me</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="section-header">
+            <h1>Sustainable Urban Development</h1>
+            <p>दिगो सहरी विकास</p>
+            <figure class="topic-banner">
+                <img src="images/sustainable-urban-development-banner.jpg" alt="Hillside city with tree-lined streets, parks, and forested mountains beyond">
+            </figure>
+            <p>Possible subtopics to explore for compact, inclusive, and climate-resilient cities.</p>
+        </section>
+
+        <section class="topics-list-container">
+            <div class="topics-card">
+                <nav class="vertical-links" id="topics-placeholder"></nav>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Omprakashghimire.com.np. All rights reserved.</p>
+    </footer>
+
+    <script src="../script.js"></script>
+
+    <script>
+        const subtopicsData = [
+            { name: "1. Compact Cities and Mixed-Use Urban Form", url: "compact-cities-and-mixed-use-urban-form.html" },
+            { name: "2. Transit-Oriented Development", url: "transit-oriented-development.html" },
+            { name: "3. Walkable Streets and Cycling Infrastructure", url: "walkable-streets-and-cycling-infrastructure.html" },
+            { name: "4. Green Buildings and Passive Design", url: "green-buildings-and-passive-design.html" },
+            { name: "5. Urban Heat Islands and Cool Cities", url: "urban-heat-islands-and-cool-cities.html" },
+            { name: "6. Parks, Street Trees, and Urban Forests", url: "parks-street-trees-and-urban-forests.html" },
+            { name: "7. Affordable Housing and Inclusive Neighborhoods", url: "affordable-housing-and-inclusive-neighborhoods.html" },
+            { name: "8. Informal Settlement Upgrading", url: "informal-settlement-upgrading.html" },
+            { name: "9. Stormwater Management and Sponge Cities", url: "stormwater-management-and-sponge-cities.html" },
+            { name: "10. Urban Energy Systems and District Networks", url: "urban-energy-systems-and-district-networks.html" },
+            { name: "11. Public Space and Livable Streets", url: "public-space-and-livable-streets.html" },
+            { name: "12. Heritage Conservation and Adaptive Reuse", url: "heritage-conservation-and-adaptive-reuse.html" },
+            { name: "13. Peri-Urban Growth and Sprawl Control", url: "peri-urban-growth-and-sprawl-control.html" },
+            { name: "14. Smart Cities, Sensors, and Open Data", url: "smart-cities-sensors-and-open-data.html" },
+            { name: "15. Climate-Resilient Urban Infrastructure", url: "climate-resilient-urban-infrastructure.html" },
+            { name: "16. Disaster Risk Reduction in Cities", url: "disaster-risk-reduction-in-cities.html" },
+            { name: "17. Urban Governance and Municipal Finance", url: "urban-governance-and-municipal-finance.html" },
+            { name: "18. Fifteen-Minute Cities and Proximity Planning", url: "fifteen-minute-cities-and-proximity-planning.html" },
+            { name: "19. Sustainable Urban Development in Nepal", url: "sustainable-urban-development-in-nepal.html" },
+            { name: "20. Urban Biodiversity and Blue-Green Networks", url: "urban-biodiversity-and-blue-green-networks.html" }
+        ];
+
+        const container = document.getElementById('topics-placeholder');
+
+        subtopicsData.forEach(topic => {
+            const link = document.createElement('a');
+            link.href = topic.url;
+            link.className = 'topic-line-link';
+            link.innerHTML = `
+                <span class="topic-title">${topic.name}</span>
+                <span class="topic-icon">→</span>
+            `;
+            container.appendChild(link);
+        });
+    </script>
+</body>
+</html>

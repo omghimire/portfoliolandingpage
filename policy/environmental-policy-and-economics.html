@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Environmental Policy &amp; Economics | EcoVision</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">Om p. Ghimire</div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../environment.html">Environment</a></li>
+                <li><a href="../tech.html">Tech</a></li>
+                <li><a href="../about.html">About Me</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="section-header">
+            <h1>Environmental Policy &amp; Economics</h1>
+            <p>वातावरणीय नीति र अर्थशास्त्र</p>
+            <figure class="topic-banner">
+                <img src="images/environmental-policy-economics-banner.jpg" alt="Public building and gardens on a hillside with terraced farms and forested mountains">
+            </figure>
+            <p>Possible subtopics to explore for environmental governance, economic instruments, and policy design.</p>
+        </section>
+
+        <section class="topics-list-container">
+            <div class="topics-card">
+                <nav class="vertical-links" id="topics-placeholder"></nav>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Omprakashghimire.com.np. All rights reserved.</p>
+    </footer>
+
+    <script src="../script.js"></script>
+
+    <script>
+        const subtopicsData = [
+            { name: "1. Environmental Governance and Institutions", url: "environmental-governance-and-institutions.html" },
+            { name: "2. Command-and-Control Regulation and Standards", url: "command-and-control-regulation-and-standards.html" },
+            { name: "3. Market-Based Instruments and Carbon Pricing", url: "market-based-instruments-and-carbon-pricing.html" },
+            { name: "4. Environmental Taxes and Green Fiscal Reform", url: "environmental-taxes-and-green-fiscal-reform.html" },
+            { name: "5. Subsidies, Incentives, and Harmful Subsidy Reform", url: "subsidies-incentives-and-harmful-subsidy-reform.html" },
+            { name: "6. Cost-Benefit Analysis and Valuation of Nature", url: "cost-benefit-analysis-and-valuation-of-nature.html" },
+            { name: "7. Payment for Ecosystem Services (PES)", url: "payment-for-ecosystem-services.html" },
+            { name: "8. Natural Capital Accounting", url: "natural-capital-accounting.html" },
+            { name: "9. Environmental Impact Assessment (EIA)", url: "environmental-impact-assessment.html" },
+            { name: "10. Polluter Pays Principle and Liability", url: "polluter-pays-principle-and-liability.html" },
+            { name: "11. International Environmental Agreements", url: "international-environmental-agreements.html" },
+            { name: "12. Trade, Environment, and Green Tariffs", url: "trade-environment-and-green-tariffs.html" },
+            { name: "13. Green Finance and Sustainable Investment", url: "green-finance-and-sustainable-investment.html" },
+            { name: "14. Just Transition and Equity in Environmental Policy", url: "just-transition-and-equity-in-environmental-policy.html" },
+            { name: "15. Behavioral Economics and Nudges for Sustainability", url: "behavioral-economics-and-nudges-for-sustainability.html" },
+            { name: "16. Corporate Environmental Responsibility and Disclosure", url: "corporate-environmental-responsibility-and-disclosure.html" },
+            { name: "17. Decentralization and Local Environmental Governance", url: "decentralization-and-local-environmental-governance.html" },
+            { name: "18. Environmental Justice and Rights of Nature", url: "environmental-justice-and-rights-of-nature.html" },
+            { name: "19. Environmental Policy and Economics in Nepal", url: "environmental-policy-and-economics-in-nepal.html" },
+            { name: "20. Monitoring, Enforcement, and Policy Evaluation", url: "monitoring-enforcement-and-policy-evaluation.html" }
+        ];
+
+        const container = document.getElementById('topics-placeholder');
+
+        subtopicsData.forEach(topic => {
+            const link = document.createElement('a');
+            link.href = topic.url;
+            link.className = 'topic-line-link';
+            link.innerHTML = `
+                <span class="topic-title">${topic.name}</span>
+                <span class="topic-icon">→</span>
+            `;
+            container.appendChild(link);
+        });
+    </script>
+</body>
+</html>

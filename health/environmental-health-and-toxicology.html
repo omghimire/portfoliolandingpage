@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Environmental Health &amp; Toxicology | EcoVision</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">Om p. Ghimire</div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../environment.html">Environment</a></li>
+                <li><a href="../tech.html">Tech</a></li>
+                <li><a href="../about.html">About Me</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="section-header">
+            <h1>Environmental Health &amp; Toxicology</h1>
+            <p>वातावरणीय स्वास्थ्य र विषविज्ञान</p>
+            <figure class="topic-banner">
+                <img src="images/environmental-health-toxicology-banner.jpg" alt="Traditional Himalayan stone water spout with clear water, plants, and forested hills">
+            </figure>
+            <p>Possible subtopics to explore for environmental exposures, toxicology, and public health protection.</p>
+        </section>
+
+        <section class="topics-list-container">
+            <div class="topics-card">
+                <nav class="vertical-links" id="topics-placeholder"></nav>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Omprakashghimire.com.np. All rights reserved.</p>
+    </footer>
+
+    <script src="../script.js"></script>
+
+    <script>
+        const subtopicsData = [
+            { name: "1. Principles of Environmental Toxicology", url: "principles-of-environmental-toxicology.html" },
+            { name: "2. Dose-Response and Exposure Pathways", url: "dose-response-and-exposure-pathways.html" },
+            { name: "3. Heavy Metals in Soil, Water, and Food", url: "heavy-metals-in-soil-water-and-food.html" },
+            { name: "4. Pesticide Residues and Human Health", url: "pesticide-residues-and-human-health.html" },
+            { name: "5. Persistent Organic Pollutants (POPs)", url: "persistent-organic-pollutants.html" },
+            { name: "6. Endocrine Disruptors", url: "endocrine-disruptors.html" },
+            { name: "7. Waterborne Diseases and Pathogens", url: "waterborne-diseases-and-pathogens.html" },
+            { name: "8. Vector-Borne Diseases and Climate", url: "vector-borne-diseases-and-climate.html" },
+            { name: "9. Occupational and Workplace Exposures", url: "occupational-and-workplace-exposures.html" },
+            { name: "10. Indoor Chemical Exposures and Household Products", url: "indoor-chemical-exposures-and-household-products.html" },
+            { name: "11. Lead, Mercury, and Neurotoxicity", url: "lead-mercury-and-neurotoxicity.html" },
+            { name: "12. Food Safety and Contaminant Monitoring", url: "food-safety-and-contaminant-monitoring.html" },
+            { name: "13. Antimicrobial Resistance in the Environment", url: "antimicrobial-resistance-in-the-environment.html" },
+            { name: "14. Noise Pollution and Community Health", url: "noise-pollution-and-community-health.html" },
+            { name: "15. Radiation and Radon Exposure", url: "radiation-and-radon-exposure.html" },
+            { name: "16. Children's Environmental Health", url: "childrens-environmental-health.html" },
+            { name: "17. One Health and Zoonotic Disease", url: "one-health-and-zoonotic-disease.html" },
+            { name: "18. Risk Assessment and Public Health Standards", url: "risk-assessment-and-public-health-standards.html" },
+            { name: "19. Environmental Health in Nepal", url: "environmental-health-in-nepal.html" },
+            { name: "20. Biomonitoring and Environmental Epidemiology", url: "biomonitoring-and-environmental-epidemiology.html" }
+        ];
+
+        const container = document.getElementById('topics-placeholder');
+
+        subtopicsData.forEach(topic => {
+            const link = document.createElement('a');
+            link.href = topic.url;
+            link.className = 'topic-line-link';
+            link.innerHTML = `
+                <span class="topic-title">${topic.name}</span>
+                <span class="topic-icon">→</span>
+            `;
+            container.appendChild(link);
+        });
+    </script>
+</body>
+</html>

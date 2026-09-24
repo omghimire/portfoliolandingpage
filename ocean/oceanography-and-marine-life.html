@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oceanography &amp; Marine Life | EcoVision</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">Om p. Ghimire</div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../environment.html">Environment</a></li>
+                <li><a href="../tech.html">Tech</a></li>
+                <li><a href="../about.html">About Me</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="section-header">
+            <h1>Oceanography &amp; Marine Life</h1>
+            <p>समुद्र विज्ञान र समुद्री जीव</p>
+            <figure class="topic-banner">
+                <img src="images/oceanography-marine-life-banner.jpg" alt="Sunlit turquoise shallows meeting deep blue ocean beside a rocky coastal headland">
+            </figure>
+            <p>Possible subtopics to explore for ocean science, marine ecosystems, and coastal stewardship.</p>
+        </section>
+
+        <section class="topics-list-container">
+            <div class="topics-card">
+                <nav class="vertical-links" id="topics-placeholder"></nav>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Omprakashghimire.com.np. All rights reserved.</p>
+    </footer>
+
+    <script src="../script.js"></script>
+
+    <script>
+        const subtopicsData = [
+            { name: "1. Physical Oceanography and Ocean Circulation", url: "physical-oceanography-and-ocean-circulation.html" },
+            { name: "2. Chemical Oceanography and Marine Chemistry", url: "chemical-oceanography-and-marine-chemistry.html" },
+            { name: "3. Waves, Tides, and Coastal Processes", url: "waves-tides-and-coastal-processes.html" },
+            { name: "4. Marine Food Webs and Primary Production", url: "marine-food-webs-and-primary-production.html" },
+            { name: "5. Coral Reefs and Tropical Marine Ecosystems", url: "coral-reefs-and-tropical-marine-ecosystems.html" },
+            { name: "6. Mangroves, Seagrass, and Coastal Nurseries", url: "mangroves-seagrass-and-coastal-nurseries.html" },
+            { name: "7. Deep-Sea Ecosystems and Hydrothermal Vents", url: "deep-sea-ecosystems-and-hydrothermal-vents.html" },
+            { name: "8. Whales, Dolphins, and Marine Mammals", url: "whales-dolphins-and-marine-mammals.html" },
+            { name: "9. Fish Stocks and Pelagic Fisheries", url: "fish-stocks-and-pelagic-fisheries.html" },
+            { name: "10. Sea Turtles and Migratory Marine Species", url: "sea-turtles-and-migratory-marine-species.html" },
+            { name: "11. Plankton, Kelp Forests, and Habitat Engineers", url: "plankton-kelp-forests-and-habitat-engineers.html" },
+            { name: "12. Ocean Acidification and Chemistry Change", url: "ocean-acidification-and-chemistry-change.html" },
+            { name: "13. Marine Plastic Pollution and Ghost Gear", url: "marine-plastic-pollution-and-ghost-gear.html" },
+            { name: "14. Overfishing and Illegal Fishing", url: "overfishing-and-illegal-fishing.html" },
+            { name: "15. Marine Protected Areas and Ocean Sanctuaries", url: "marine-protected-areas-and-ocean-sanctuaries.html" },
+            { name: "16. Coastal Erosion, Sea-Level Rise, and Shorelines", url: "coastal-erosion-sea-level-rise-and-shorelines.html" },
+            { name: "17. Blue Carbon and Ocean Climate Regulation", url: "blue-carbon-and-ocean-climate-regulation.html" },
+            { name: "18. Sustainable Aquaculture and Mariculture", url: "sustainable-aquaculture-and-mariculture.html" },
+            { name: "19. Himalayan Rivers and the Bay of Bengal", url: "himalayan-rivers-and-the-bay-of-bengal.html" },
+            { name: "20. Ocean Governance, UNCLOS, and the High Seas", url: "ocean-governance-unclos-and-the-high-seas.html" }
+        ];
+
+        const container = document.getElementById('topics-placeholder');
+
+        subtopicsData.forEach(topic => {
+            const link = document.createElement('a');
+            link.href = topic.url;
+            link.className = 'topic-line-link';
+            link.innerHTML = `
+                <span class="topic-title">${topic.name}</span>
+                <span class="topic-icon">→</span>
+            `;
+            container.appendChild(link);
+        });
+    </script>
+</body>
+</html>

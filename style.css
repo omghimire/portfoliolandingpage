@@ -934,6 +934,33 @@ footer p {
     background-attachment: fixed;
 }
 
+.hydrology-vlog-page {
+    background-image:
+        linear-gradient(180deg, rgba(238, 246, 242, 0.88) 0%, rgba(238, 246, 242, 0.92) 100%),
+        url('hydrology/images/hydrology-water-banner.jpg');
+    background-size: cover;
+    background-position: center 30%;
+    background-attachment: fixed;
+}
+
+.waste-vlog-page {
+    background-image:
+        linear-gradient(180deg, rgba(238, 246, 242, 0.88) 0%, rgba(238, 246, 242, 0.92) 100%),
+        url('waste/images/waste-management-banner.jpg');
+    background-size: cover;
+    background-position: center 30%;
+    background-attachment: fixed;
+}
+
+.agriculture-vlog-page {
+    background-image:
+        linear-gradient(180deg, rgba(238, 246, 242, 0.88) 0%, rgba(238, 246, 242, 0.92) 100%),
+        url('agriculture/images/sustainable-agriculture-banner.jpg');
+    background-size: cover;
+    background-position: center 30%;
+    background-attachment: fixed;
+}
+
 /* YouTube Link Section */
 .vlog-links {
     margin-top: 50px;
@@ -1103,7 +1130,10 @@ footer p {
 
     .climate-vlog-page,
     .renewable-vlog-page,
-    .biodiversity-vlog-page {
+    .biodiversity-vlog-page,
+    .hydrology-vlog-page,
+    .waste-vlog-page,
+    .agriculture-vlog-page {
         background-attachment: scroll;
     }
 

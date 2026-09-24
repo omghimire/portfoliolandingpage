@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forest &amp; Terrestrial Ecosystems | EcoVision</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">Om p. Ghimire</div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../environment.html">Environment</a></li>
+                <li><a href="../tech.html">Tech</a></li>
+                <li><a href="../about.html">About Me</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="section-header">
+            <h1>Forest &amp; Terrestrial Ecosystems</h1>
+            <p>वन र स्थलीय पारिस्थितिक प्रणाली</p>
+            <figure class="topic-banner">
+                <img src="images/forest-terrestrial-ecosystems-banner.jpg" alt="Misty Himalayan mixed forest on mountain slopes with snow peaks beyond">
+            </figure>
+            <p>Possible subtopics to explore for forests, grasslands, soils, and sustainable land stewardship.</p>
+        </section>
+
+        <section class="topics-list-container">
+            <div class="topics-card">
+                <nav class="vertical-links" id="topics-placeholder"></nav>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Omprakashghimire.com.np. All rights reserved.</p>
+    </footer>
+
+    <script src="../script.js"></script>
+
+    <script>
+        const subtopicsData = [
+            { name: "1. Forest Types and Biomes", url: "forest-types-and-biomes.html" },
+            { name: "2. Tropical Rainforests and Canopy Ecology", url: "tropical-rainforests-and-canopy-ecology.html" },
+            { name: "3. Temperate Forests and Seasonal Dynamics", url: "temperate-forests-and-seasonal-dynamics.html" },
+            { name: "4. Boreal Forests and Taiga Ecosystems", url: "boreal-forests-and-taiga-ecosystems.html" },
+            { name: "5. Dry Forests, Savannas, and Woodlands", url: "dry-forests-savannas-and-woodlands.html" },
+            { name: "6. Mountain Forests and Alpine Ecosystems", url: "mountain-forests-and-alpine-ecosystems.html" },
+            { name: "7. Grasslands, Prairies, and Steppe Ecosystems", url: "grasslands-prairies-and-steppe-ecosystems.html" },
+            { name: "8. Deserts and Arid Land Ecology", url: "deserts-and-arid-land-ecology.html" },
+            { name: "9. Soil Ecology and Forest Floor Processes", url: "soil-ecology-and-forest-floor-processes.html" },
+            { name: "10. Forest Carbon Sinks and Climate Regulation", url: "forest-carbon-sinks-and-climate-regulation.html" },
+            { name: "11. Deforestation and Land-Use Change", url: "deforestation-and-land-use-change.html" },
+            { name: "12. Forest Degradation and Fragmentation", url: "forest-degradation-and-fragmentation.html" },
+            { name: "13. Sustainable Forest Management and Certification", url: "sustainable-forest-management-and-certification.html" },
+            { name: "14. Community Forestry and Forest User Groups", url: "community-forestry-and-forest-user-groups.html" },
+            { name: "15. Reforestation, Afforestation, and Restoration", url: "reforestation-afforestation-and-restoration.html" },
+            { name: "16. Wildfires, Forest Disturbance, and Regeneration", url: "wildfires-forest-disturbance-and-regeneration.html" },
+            { name: "17. Forest Pests, Disease, and Invasive Plants", url: "forest-pests-disease-and-invasive-plants.html" },
+            { name: "18. Non-Timber Forest Products and Livelihoods", url: "non-timber-forest-products-and-livelihoods.html" },
+            { name: "19. Forests of Nepal and Himalayan Ecosystems", url: "forests-of-nepal-and-himalayan-ecosystems.html" },
+            { name: "20. Forest Policy, REDD+, and Conservation Finance", url: "forest-policy-redd-and-conservation-finance.html" }
+        ];
+
+        const container = document.getElementById('topics-placeholder');
+
+        subtopicsData.forEach(topic => {
+            const link = document.createElement('a');
+            link.href = topic.url;
+            link.className = 'topic-line-link';
+            link.innerHTML = `
+                <span class="topic-title">${topic.name}</span>
+                <span class="topic-icon">→</span>
+            `;
+            container.appendChild(link);
+        });
+    </script>
+</body>
+</html>
