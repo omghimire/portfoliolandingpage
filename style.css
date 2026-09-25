@@ -907,6 +907,18 @@ footer p {
     object-fit: cover;
 }
 
+.vlog-figure figcaption {
+    padding: 12px 18px 14px;
+    font-size: 0.84rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    line-height: 1.5;
+    text-align: center;
+    color: var(--color-text-muted);
+    background: linear-gradient(180deg, #f7fdfb 0%, #ffffff 100%);
+    border-top: 1px solid rgba(16, 185, 129, 0.1);
+}
+
 .climate-vlog-page {
     background-image:
         linear-gradient(180deg, rgba(238, 246, 242, 0.88) 0%, rgba(238, 246, 242, 0.92) 100%),
@@ -956,6 +968,42 @@ footer p {
     background-image:
         linear-gradient(180deg, rgba(238, 246, 242, 0.88) 0%, rgba(238, 246, 242, 0.92) 100%),
         url('agriculture/images/sustainable-agriculture-banner.jpg');
+    background-size: cover;
+    background-position: center 30%;
+    background-attachment: fixed;
+}
+
+.air-vlog-page {
+    background-image:
+        linear-gradient(180deg, rgba(238, 246, 242, 0.9) 0%, rgba(238, 246, 242, 0.94) 100%),
+        url('air/images/air-quality-atmosphere-banner.jpg');
+    background-size: cover;
+    background-position: center 30%;
+    background-attachment: fixed;
+}
+
+.forest-vlog-page {
+    background-image:
+        linear-gradient(180deg, rgba(238, 246, 242, 0.88) 0%, rgba(238, 246, 242, 0.92) 100%),
+        url('forest/images/forest-terrestrial-ecosystems-banner.jpg');
+    background-size: cover;
+    background-position: center 30%;
+    background-attachment: fixed;
+}
+
+.policy-vlog-page {
+    background-image:
+        linear-gradient(180deg, rgba(238, 246, 242, 0.88) 0%, rgba(238, 246, 242, 0.92) 100%),
+        url('policy/images/environmental-policy-economics-banner.jpg');
+    background-size: cover;
+    background-position: center 30%;
+    background-attachment: fixed;
+}
+
+.ocean-vlog-page {
+    background-image:
+        linear-gradient(180deg, rgba(238, 246, 242, 0.88) 0%, rgba(238, 246, 242, 0.92) 100%),
+        url('ocean/images/oceanography-marine-life-banner.jpg');
     background-size: cover;
     background-position: center 30%;
     background-attachment: fixed;
@@ -1133,7 +1181,11 @@ footer p {
     .biodiversity-vlog-page,
     .hydrology-vlog-page,
     .waste-vlog-page,
-    .agriculture-vlog-page {
+    .agriculture-vlog-page,
+    .air-vlog-page,
+    .forest-vlog-page,
+    .policy-vlog-page,
+    .ocean-vlog-page {
         background-attachment: scroll;
     }
 
