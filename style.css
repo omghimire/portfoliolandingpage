@@ -1230,34 +1230,28 @@ footer p {
    ============================================ */
 .tech-home,
 .tech-hub {
-    --tech-bg: #f4f7fb;
-    --tech-ink: #122033;
-    --tech-muted: #52627a;
-    --tech-line: rgba(14, 116, 144, 0.16);
-    --tech-cyan: #0e7490;
-    --tech-violet: #6d28d9;
+    --tech-bg: #070b14;
+    --tech-ink: #e8eef8;
+    --tech-muted: #9aabc0;
+    --tech-line: rgba(34, 211, 238, 0.18);
+    --tech-cyan: #22d3ee;
+    --tech-violet: #a78bfa;
     font-family: 'Space Grotesk', 'Plus Jakarta Sans', sans-serif;
     color: var(--tech-ink);
     background-color: var(--tech-bg);
     background-image:
-        linear-gradient(rgba(14, 116, 144, 0.06) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(14, 116, 144, 0.06) 1px, transparent 1px),
-        radial-gradient(ellipse 70% 45% at 10% -10%, rgba(34, 211, 238, 0.22), transparent 50%),
-        radial-gradient(ellipse 50% 40% at 100% 0%, rgba(167, 139, 250, 0.16), transparent 46%);
+        linear-gradient(rgba(34, 211, 238, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(34, 211, 238, 0.05) 1px, transparent 1px),
+        radial-gradient(ellipse 70% 45% at 8% -8%, rgba(34, 211, 238, 0.16), transparent 52%),
+        radial-gradient(ellipse 50% 40% at 100% 0%, rgba(167, 139, 250, 0.16), transparent 48%);
     background-size: 48px 48px, 48px 48px, auto, auto;
     background-attachment: fixed;
 }
 
-.tech-home {
-    background-image:
-        radial-gradient(ellipse 55% 40% at 0% 0%, rgba(34, 211, 238, 0.18), transparent 55%),
-        radial-gradient(ellipse 45% 35% at 100% 8%, rgba(167, 139, 250, 0.16), transparent 50%);
-    background-size: auto;
-}
 .tech-home ::selection,
 .tech-hub ::selection {
-    background: rgba(14, 116, 144, 0.2);
-    color: #122033;
+    background: rgba(34, 211, 238, 0.28);
+    color: #f8fbff;
 }
 
 .tech-home h1,
@@ -1266,7 +1260,7 @@ footer p {
 .tech-hub h1,
 .tech-hub h2,
 .tech-hub h3 {
-    color: #122033;
+    color: #f4f7fb;
 }
 
 .tech-home a,
@@ -1276,41 +1270,42 @@ footer p {
 
 .tech-home .header,
 .tech-hub .header {
-    background: rgba(244, 247, 251, 0.9);
+    background: rgba(7, 11, 20, 0.86);
     border-bottom: 1px solid var(--tech-line);
     box-shadow: none;
 }
 
 .tech-home .logo,
 .tech-hub .logo {
-    background: linear-gradient(135deg, #0e7490, #6d28d9);
+    background: linear-gradient(135deg, #67e8f9, #c4b5fd);
     -webkit-background-clip: text;
     background-clip: text;
+    color: transparent;
 }
 
 .tech-home .nav-links li a,
 .tech-hub .nav-links li a {
-    color: #334155;
+    color: #c5d0e0;
 }
 
 .tech-home .nav-links li a:hover,
 .tech-home .nav-links li a.active,
 .tech-hub .nav-links li a:hover,
 .tech-hub .nav-links li a.active {
-    color: #0e7490;
-    background: rgba(14, 116, 144, 0.1);
+    color: #67e8f9;
+    background: rgba(34, 211, 238, 0.12);
 }
 
 .tech-home .hamburger span,
 .tech-hub .hamburger span {
-    background: #0e7490;
+    background: #67e8f9;
 }
 
 .tech-home footer,
 .tech-hub footer {
-    background: #e8eef6;
+    background: #05080f;
     border-top: 1px solid var(--tech-line);
-    color: #52627a;
+    color: #9aabc0;
 }
 
 .tech-hero {
@@ -1357,7 +1352,8 @@ footer p {
     margin: 28px 0 8px;
     border-radius: 24px;
     overflow: hidden;
-    box-shadow: 0 18px 40px rgba(18, 32, 51, 0.12);
+    border: 1px solid rgba(34, 211, 238, 0.2);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
 }
 
 .tech-hero-figure img {
@@ -1384,15 +1380,16 @@ footer p {
     padding: 0 0 20px;
     border-radius: 22px;
     overflow: hidden;
-    background: #ffffff;
-    border: 1px solid rgba(18, 32, 51, 0.06);
-    box-shadow: 0 16px 40px rgba(18, 32, 51, 0.08);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    background: #101826;
+    border: 1px solid rgba(34, 211, 238, 0.16);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
 .tech-topic:hover {
     transform: translateY(-4px);
-    box-shadow: 0 22px 48px rgba(18, 32, 51, 0.12);
+    border-color: rgba(34, 211, 238, 0.4);
+    box-shadow: 0 22px 48px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(167, 139, 250, 0.18);
 }
 
 .tech-photo {
@@ -1471,16 +1468,16 @@ footer p {
     padding: 8px 14px;
     border-radius: 999px;
     text-decoration: none;
-    color: #0e7490;
-    background: rgba(14, 116, 144, 0.08);
-    border: 1px solid rgba(14, 116, 144, 0.22);
+    color: #67e8f9;
+    background: rgba(34, 211, 238, 0.1);
+    border: 1px solid rgba(34, 211, 238, 0.32);
     font-size: 0.9rem;
     font-weight: 600;
 }
 
 .tech-topic-link:hover {
-    background: rgba(14, 116, 144, 0.16);
-    color: #155e75;
+    background: rgba(34, 211, 238, 0.2);
+    color: #ecfeff;
 }
 
 .tech-hub-main {
@@ -1520,7 +1517,7 @@ footer p {
 }
 
 .tech-subtopic p {
-    color: #334155;
+    color: var(--tech-muted);
 }
 
 @media (max-width: 980px) {
@@ -1532,8 +1529,8 @@ footer p {
 @media (max-width: 768px) {
     .tech-home .nav-links,
     .tech-hub .nav-links {
-        background: #f8fbff;
-        box-shadow: -8px 0 30px rgba(18, 32, 51, 0.12);
+        background: #0c1220;
+        box-shadow: -8px 0 30px rgba(0, 0, 0, 0.45);
     }
 
     .tech-board {
