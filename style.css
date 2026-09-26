@@ -1230,28 +1230,28 @@ footer p {
    ============================================ */
 .tech-home,
 .tech-hub {
-    --tech-bg: #070b14;
-    --tech-ink: #e8eef8;
-    --tech-muted: #9aabc0;
-    --tech-line: rgba(34, 211, 238, 0.18);
-    --tech-cyan: #22d3ee;
-    --tech-violet: #a78bfa;
+    --tech-bg: #f5f9fd;
+    --tech-ink: #17263c;
+    --tech-muted: #55667f;
+    --tech-line: rgba(14, 116, 144, 0.16);
+    --tech-cyan: #0e7490;
+    --tech-violet: #6d28d9;
     font-family: 'Space Grotesk', 'Plus Jakarta Sans', sans-serif;
     color: var(--tech-ink);
     background-color: var(--tech-bg);
     background-image:
-        linear-gradient(rgba(34, 211, 238, 0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(34, 211, 238, 0.05) 1px, transparent 1px),
-        radial-gradient(ellipse 70% 45% at 8% -8%, rgba(34, 211, 238, 0.16), transparent 52%),
-        radial-gradient(ellipse 50% 40% at 100% 0%, rgba(167, 139, 250, 0.16), transparent 48%);
+        linear-gradient(rgba(14, 116, 144, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(14, 116, 144, 0.05) 1px, transparent 1px),
+        radial-gradient(ellipse 70% 45% at 8% -8%, rgba(34, 211, 238, 0.18), transparent 52%),
+        radial-gradient(ellipse 50% 40% at 100% 0%, rgba(167, 139, 250, 0.18), transparent 48%);
     background-size: 48px 48px, 48px 48px, auto, auto;
     background-attachment: fixed;
 }
 
 .tech-home ::selection,
 .tech-hub ::selection {
-    background: rgba(34, 211, 238, 0.28);
-    color: #f8fbff;
+    background: rgba(14, 116, 144, 0.18);
+    color: #0b1524;
 }
 
 .tech-home h1,
@@ -1260,7 +1260,7 @@ footer p {
 .tech-hub h1,
 .tech-hub h2,
 .tech-hub h3 {
-    color: #f4f7fb;
+    color: #0f1d31;
 }
 
 .tech-home a,
@@ -1270,14 +1270,14 @@ footer p {
 
 .tech-home .header,
 .tech-hub .header {
-    background: rgba(7, 11, 20, 0.86);
+    background: rgba(255, 255, 255, 0.88);
     border-bottom: 1px solid var(--tech-line);
-    box-shadow: none;
+    box-shadow: 0 2px 18px rgba(23, 38, 60, 0.06);
 }
 
 .tech-home .logo,
 .tech-hub .logo {
-    background: linear-gradient(135deg, #67e8f9, #c4b5fd);
+    background: linear-gradient(135deg, #0e7490, #6d28d9);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -1285,27 +1285,27 @@ footer p {
 
 .tech-home .nav-links li a,
 .tech-hub .nav-links li a {
-    color: #c5d0e0;
+    color: #45566e;
 }
 
 .tech-home .nav-links li a:hover,
 .tech-home .nav-links li a.active,
 .tech-hub .nav-links li a:hover,
 .tech-hub .nav-links li a.active {
-    color: #67e8f9;
-    background: rgba(34, 211, 238, 0.12);
+    color: #0e7490;
+    background: rgba(14, 116, 144, 0.1);
 }
 
 .tech-home .hamburger span,
 .tech-hub .hamburger span {
-    background: #67e8f9;
+    background: #0e7490;
 }
 
 .tech-home footer,
 .tech-hub footer {
-    background: #05080f;
+    background: #eaf1f8;
     border-top: 1px solid var(--tech-line);
-    color: #9aabc0;
+    color: #55667f;
 }
 
 .tech-hero {
@@ -1352,8 +1352,8 @@ footer p {
     margin: 28px 0 8px;
     border-radius: 24px;
     overflow: hidden;
-    border: 1px solid rgba(34, 211, 238, 0.2);
-    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+    border: 1px solid rgba(14, 116, 144, 0.18);
+    box-shadow: 0 18px 40px rgba(23, 38, 60, 0.12);
 }
 
 .tech-hero-figure img {
@@ -1380,16 +1380,16 @@ footer p {
     padding: 0 0 20px;
     border-radius: 22px;
     overflow: hidden;
-    background: #101826;
-    border: 1px solid rgba(34, 211, 238, 0.16);
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+    background: #ffffff;
+    border: 1px solid rgba(14, 116, 144, 0.14);
+    box-shadow: 0 14px 34px rgba(23, 38, 60, 0.08);
     transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
 .tech-topic:hover {
     transform: translateY(-4px);
-    border-color: rgba(34, 211, 238, 0.4);
-    box-shadow: 0 22px 48px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(167, 139, 250, 0.18);
+    border-color: rgba(14, 116, 144, 0.34);
+    box-shadow: 0 20px 44px rgba(23, 38, 60, 0.14), 0 0 0 1px rgba(109, 40, 217, 0.12);
 }
 
 .tech-photo {
@@ -1468,16 +1468,16 @@ footer p {
     padding: 8px 14px;
     border-radius: 999px;
     text-decoration: none;
-    color: #67e8f9;
-    background: rgba(34, 211, 238, 0.1);
-    border: 1px solid rgba(34, 211, 238, 0.32);
+    color: #0b5c73;
+    background: rgba(14, 116, 144, 0.08);
+    border: 1px solid rgba(14, 116, 144, 0.28);
     font-size: 0.9rem;
     font-weight: 600;
 }
 
 .tech-topic-link:hover {
-    background: rgba(34, 211, 238, 0.2);
-    color: #ecfeff;
+    background: rgba(14, 116, 144, 0.16);
+    color: #083f50;
 }
 
 .tech-hub-main {
@@ -1529,8 +1529,8 @@ footer p {
 @media (max-width: 768px) {
     .tech-home .nav-links,
     .tech-hub .nav-links {
-        background: #0c1220;
-        box-shadow: -8px 0 30px rgba(0, 0, 0, 0.45);
+        background: #ffffff;
+        box-shadow: -8px 0 30px rgba(23, 38, 60, 0.16);
     }
 
     .tech-board {
